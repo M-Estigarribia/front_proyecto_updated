@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /* gotta check, let's see if I can change the colors */
+    /* Primary colors */
+    --primary-color-orange: rgb(242, 95, 58);
+    --primary-color-blue: rgb(35, 44, 81);
+    --primary-color-grey: rgb(255, 255, 255); 
+
+    /* Secondary colors */
+    --secondary-color-orange: rgb(255, 239, 234);
+    --secondary-color-blue: rgb(29, 30, 37);
+    --secondary-color-greyblue: rgb(143, 148, 167);
+    --secondary-color-lightgrey: rgb(249, 249, 249);
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-color-grey);
+    color: var(--primary-color-blue);
+}
+
+/* Header styles */
+header{
+    width: 100vw;
+    padding: 50px 0;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+#header-links{
+    display: flex;
+    list-style-type: none;  
+}
+
+#header-links li{
+    padding-left: 2vh;
+}
+
+/* Main styles */
+button{
+    background-color: var(--primary-color-orange);
+    color: var(--primary-color-grey);
+    border: none;
+    padding: 16px 40px;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 30px;
+    box-shadow: 0 7px 15px var(--primary-color-orange);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+#description{
+    display: flex;
+    height: 60vh;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#description div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items:baseline;
+}
+
+#description p{
+   color: var(--secondary-color-greyblue); 
+   width: 50%;
+   margin: 4vh 0;
+   font-size: 1.4rem;
+   line-height: 2.2rem;
+}
+
+h1{
+    font-size: 3vw;
+    width: 70%;
+}
+
+#description img{
+    min-width: 400px;
+    height: 50vh;
+}
+
+#traits{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+
+#traits div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#traits h3{
+    font-size: 2vw;
+    width: 90%;
+}
+
+
+#traits>div>p{
+    color: var(--secondary-color-greyblue); 
+    width: 70%;
+    margin: 4vh 0;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+ }
+
+/* Modification to li's styles - starts here
+I made this so they start with a 0 and also don't finish with a dot */
+#traits ol { 
+    counter-reset:list-number;
+    list-style-type: none;
+    margin-left: 6vw;
+}
+
+#traits li::before { 
+    content: counter(list-number, decimal-leading-zero); 
+    counter-increment: list-number;
+    float: left;
+    background-color: var(--primary-color-orange);
+    color: var(--primary-color-grey);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+  }
+/* Modification to li's styles - ends here */
+
+#traits ol p{
+   margin-left: 6vw;
+}
+
+/* This will change the traits titles' styles */
+#traits li>p:first-child{
+    color: var(--primary-color-blue);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* This will change the traits descriptions' styles */
+#traits li>p:nth-child(2){
+    color: var(--secondary-color-greyblue); 
+    text-align: justify;
+    width: 70%;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+ }
+
+#opinions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+#opinions h3{
+    font-size: 2vw;
+}
+
+#slides{
+    display: flex;
+    width: 90vw;
+    padding-top: 5vh;
+}
+
+.people{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+/* This will change the names' styles */
+.people>p:nth-child(2){
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+ }
+
+/* This will change the descriptions' style */
+.people>p:nth-child(3){
+    color: var(--secondary-color-greyblue); 
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+ }
+
+
+
+
+
+/* 24/6 - gotta finish the slides
+-maybe try a slideshow? 
+-also gotta finish main and start footer.
+-change the tab icon?
+-Investigate light-dark colormodes */
+
+
+
+/* @media (max-width: 680px) {
+   
+} */
+
+
+/* @media (prefers-color-scheme: dark) {
+
+} */

@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 :root{
     /* gotta check, let's see if I can change the colors */
     /* Primary colors */
@@ -26,6 +25,7 @@ body{
     font-size: 16px;
     background-color: var(--primary-color-grey);
     color: var(--primary-color-blue);
+    overflow-x: hidden;
 }
 
 /* Header styles */
@@ -55,9 +55,10 @@ button{
     background-color: var(--primary-color-orange);
     color: var(--primary-color-grey);
     border: none;
-    padding: 16px 40px;
-    font-size: large;
-    font-weight: 500;
+    height: 5vh;
+    width: 15vh;
+    font-size: 1.3rem;
+    font-weight: 700;
     border-radius: 30px;
     box-shadow: 0 7px 15px var(--primary-color-orange);
 }
@@ -126,7 +127,6 @@ h1{
     width: 90%;
 }
 
-
 #traits>div>p{
     color: var(--secondary-color-greyblue); 
     width: 70%;
@@ -155,7 +155,6 @@ I made this so they start with a 0 and also don't finish with a dot */
     border-radius: 30px;
   }
 /* Modification to li's styles - ends here */
-
 #traits ol p{
    margin-left: 6vw;
 }
@@ -178,6 +177,7 @@ I made this so they start with a 0 and also don't finish with a dot */
     line-height: 2.5rem;
  }
 
+/*Opinions, slides' styles*/
 #opinions{
     display: flex;
     flex-direction: column;
@@ -218,7 +218,158 @@ I made this so they start with a 0 and also don't finish with a dot */
     line-height: 2.5rem;
  }
 
+#join-ad{
+    background-color: var(--primary-color-orange);
+    height: 22vh;
+    width: 100vw;
+    margin-top: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../img/bg-simplify-section-desktop.svg);
+    background-size: cover;
+}
 
+#join-ad p{
+    font-size: 2vw;
+    font-weight: 700;
+    color: var(--primary-color-grey);
+    width: 30%;
+}
+
+#join-ad button{
+    background-color: var(--primary-color-grey);
+    color: var(--primary-color-orange);
+    box-shadow: none;
+}
+
+footer{
+    background-color: var(--secondary-color-blue);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 28vh;
+}
+
+/* SNS styles, logos change on hover*/
+#sns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#sns-links{
+position: relative;
+}
+
+.fb-logo{
+    position: absolute;
+    left: 0; 
+}
+
+.yt-logo{
+    position: absolute;
+    left: 4vh; 
+}
+
+.tw-logo{
+    position: absolute;
+    left: 8vh; 
+}
+
+.pin-logo{
+    position: absolute;
+    left: 12vh; 
+}
+
+.ig-logo{
+    position: absolute;
+    left: 16vh; 
+}
+
+.fb-logo img, .yt-logo img, .tw-logo img,
+.pin-logo img, .ig-logo img{
+    position: absolute;
+    margin: 0;
+}
+
+/* Opacity to 0 so it doesn't show when not hovered, then changed to 1 when
+hovered to reveal itself */
+.negative{
+    position: absolute;
+    opacity: 0;
+}
+
+.fb-logo:hover .negative, .yt-logo:hover .negative, 
+.tw-logo:hover .negative, .pin-logo:hover .negative, 
+.ig-logo:hover .negative{
+   opacity: 1;
+}
+
+/* Opacity to 0, when hovered it leaves a weird shadow behind the negative logo
+so I'm hiding it */
+.fb-logo:hover .logo, .yt-logo:hover .logo, 
+.tw-logo:hover .logo, .pin-logo:hover .logo, 
+.ig-logo:hover .logo{
+   opacity: 0;
+}
+
+/* Footer links' styles (anchors to the rest of the website)*/
+#footer-links{
+    width: 40vw;
+}
+
+#footer-links ul{
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    margin-left: 10vh;
+}
+
+#footer-links li{
+    list-style-type: none;
+    color: var(--primary-color-grey);
+    line-height: 3rem; 
+    text-align: left;
+}
+
+/* Newsletter's style */
+#newsletter{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+#newsletter p{
+    color: var(--secondary-color-greyblue);
+}
+
+#newsletter button{
+    box-shadow: none;
+    width: 9vh;
+    margin-left: 2vh;
+}
+
+#newsletter input{
+    background-color: var(--primary-color-grey);
+    border: none;
+    width: 30vh;
+    height: 5vh;
+    font-size: large;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+#newsletter input::placeholder{
+    padding-left: 2vh;
+    font-weight: 500;
+    color: var(--secondary-color-greyblue);
+}
 
 
 
@@ -227,6 +378,13 @@ I made this so they start with a 0 and also don't finish with a dot */
 -also gotta finish main and start footer.
 -change the tab icon?
 -Investigate light-dark colormodes */
+
+
+/* 25/6 - makeit responsive
+-slides
+-still needing the tab icon
+-hover styles on buttons
+ */
 
 
 

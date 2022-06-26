@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="logo - Copy.svg"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="C:\Users\biiqo\Desktop\DH\BIMESTRE I\Front End I\SEGUNDO PARCIAL FRONT I\Micaela-Estigarribia\img\icon-tab.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath877">
+      <circle
+         style="font-variation-settings:'wdth' 81.9, 'wght' 300;opacity:0.5;fill:#1e1e26;fill-opacity:1;fill-rule:evenodd;stroke-width:0.12479;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+         id="circle879"
+         cx="12"
+         cy="12"
+         r="12" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="16.671233"
+     inkscape:cx="9.4735934"
+     inkscape:cy="14.127373"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1">
+    <g
+       id="g875"
+       clip-path="url(#clipPath877)"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300">
+      <rect
+         style="font-variation-settings:'wdth' 81.9, 'wght' 300;fill:#f3603c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.261066;paint-order:stroke fill markers;stop-color:#000000"
+         id="rect844"
+         width="24"
+         height="24"
+         x="0"
+         y="0" />
+      <g
+         id="g867">
+        <g
+           id="g862">
+          <rect
+             style="font-variation-settings:'wdth' 81.90000000000000568, 'wght' 300;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.130958;paint-order:stroke fill markers;stop-color:#000000"
+             id="rect852"
+             width="12.03903"
+             height="12.03903"
+             x="11.96097"
+             y="11.96097" />
+        </g>
+        <rect
+           style="font-variation-settings:'wdth' 81.9, 'wght' 300;opacity:0.5;fill:#f3603c;fill-opacity:1;fill-rule:evenodd;stroke-width:0.131;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000000"
+           id="rect846"
+           width="12.03903"
+           height="12.03903"
+           x="11.96097"
+           y="11.96097" />
+      </g>
+      <path
+         fill="#242d52"
+         fill-rule="nonzero"
+         d="M 13.308574,17.567163 V 12.09283 c 0,-1.045667 0.242685,-1.869867 0.728055,-2.4732638 0.486033,-0.6033964 1.094071,-0.9050947 1.823453,-0.9050947 1.430911,0 2.146367,1.0456667 2.146367,3.1369995 v 5.715692 h 2.507743 v -6.352242 c 0,-1.6013218 -0.331537,-2.7981694 -0.996599,-3.591868 -0.6644,-0.7936984 -1.613258,-1.1902162 -2.847237,-1.1902162 -0.810274,0 -1.55159,0.1551591 -2.22262,0.4661405 -0.667279,0.3072614 -1.249836,0.772169 -1.697468,1.3546583 h -0.04376 C 12.056692,7.0395488 10.969253,6.4328368 9.4428577,6.4328368 c -0.642518,0 -1.261165,0.1438869 -1.8559422,0.4329868 C 6.9824096,7.1624014 6.4499412,7.5873803 6.0267042,8.1110749 H 5.9935505 V 6.597279 H 3.4858075 V 17.55589 h 2.507743 v -5.46306 c 0,-1.045667 0.2466633,-1.869867 0.7393267,-2.4732638 0.4926634,-0.6033964 1.1225835,-0.9050947 1.8890965,-0.9050947 1.4521303,0 2.1788573,1.0456667 2.1788573,3.1369995 v 5.715692 z"
+         id="path2"
+         sodipodi:nodetypes="cscssccscscccscccccccsssscc"
+         style="stroke-width:0.663073;fill:#1e1e26;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

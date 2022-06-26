@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shorcut icon" href="img/icon-tab.svg">
+    <link rel="shorcut icon" href="img/logo-icon.svg">
     <title>Front page | Manage</title>
 </head>
 
 <body>
-
     <header>
         <nav>
             <img src="img/logo.svg" alt="manage logo">
@@ -33,7 +32,7 @@
             <div>
                 <h1>Bring everyone together to build better products.</h1>
 
-                <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the large team goals in view</p>
+                <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the large team goals in view.</p>
 
                 <button>Get Started</button>
             </div>
@@ -45,7 +44,7 @@
             <div>
                 <h3>What's different about Manage?</h3>
 
-                <p>Manage provides all the functionality your teams needs,without the complexity. Our software is tailor-made for modern digital product teams</p>
+                <p>Manage provides all the functionality your teams needs,without the complexity. Our software is tailor-made for modern digital product teams.</p>
             </div>
             
             <ol>
@@ -168,10 +167,12 @@
         </div> 
         <div id="newsletter">
             <form action="" method="">
-                <input type="email" name="email" placeholder="Update in your inbox...">
+                <div id="input-field">
+                    <input type="email" name="email" placeholder="Update in your inbox..." required>
+                    <p id="error-message">Please insert a valid email</p>
+                </div>
                 <button type="submit">Go</button>
             </form>
-
             <p>Copyright 2020. All Rights Reserved</p>
         </div>
     </footer>

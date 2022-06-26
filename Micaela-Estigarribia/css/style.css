@@ -8,387 +8,655 @@
 
 :root{
     /* gotta check, let's see if I can change the colors */
-    /* Primary colors */
+    /* Colores primarios */
     --primary-color-orange: rgb(242, 95, 58);
     --primary-color-blue: rgb(35, 44, 81);
     --primary-color-grey: rgb(255, 255, 255); 
 
-    /* Secondary colors */
-    --secondary-color-orange: rgb(255, 239, 234);
+    /* Colores secundarios */
+    --secondary-color-white: rgb(255, 239, 234);
     --secondary-color-blue: rgb(29, 30, 37);
     --secondary-color-greyblue: rgb(143, 148, 167);
     --secondary-color-lightgrey: rgb(249, 249, 249);
+    --secondary-color-orange: rgb(250, 143, 116);
+    --secondary-color-error-red: rgb(156, 73, 82);
+
+    /*Variantes transparentes*/
+    --primary-color-orange-transparent: rgb(242, 95, 58, 0.6);
+    --secondary-color-lightgrey-transparent: rgba(249, 249, 249,0.9);
 }
 
+/* Estilos generales - body, botones, enlaces */
 body{
+    /* Disposición */
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    /* Dimensiones */
+    width: 100vw;
+    /* Fondo */
+    background-color: var(--primary-color-grey);
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-position: left;
+    background-repeat:space;
+    background-size:70rem;
+    /* Texto */
+    color: var(--primary-color-blue);
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
-    background-color: var(--primary-color-grey);
-    color: var(--primary-color-blue);
+    /* Visibilidad */
     overflow-x: hidden;
 }
 
-/* Header styles */
-header{
-    width: 100vw;
-    padding: 50px 0;
-    
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-}
-
-#header-links{
-    display: flex;
-    list-style-type: none;  
-}
-
-#header-links li{
-    padding-left: 2vh;
-}
-
-/* Main styles */
 button{
-    background-color: var(--primary-color-orange);
-    color: var(--primary-color-grey);
-    border: none;
+    /* Dimensiones */
     height: 5vh;
+    min-height: 40px;
+    max-height: 50px;
     width: 15vh;
-    font-size: 1.3rem;
-    font-weight: 700;
+    min-width: 150px;
+    max-width: 155px;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
+    border: none;
     border-radius: 30px;
-    box-shadow: 0 7px 15px var(--primary-color-orange);
+    box-shadow: 0 7px 15px var(--primary-color-orange-transparent);
+    /* Texto */
+    color: var(--primary-color-grey);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button:hover{
+    /* Background */
+    background-color: var(--secondary-color-orange);
+    /* Texto */
+    color: var(--secondary-color-white);  
 }
 
 a{
-    text-decoration: none;
+    /* Texto */
     color: inherit;
-    font-weight: 500;
+    font-weight: 400;
+    text-decoration: none;
 }
+
+a:hover{
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+}
+
+/* Estilos del header */
+header{
+    /* Disposición */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    /* Dimensiones */
+    height: 12vh;
+    min-height: 103px;
+    width: 100vw;
+    padding: 50px 0;
+    /* Background */
+    background-color: var(--secondary-color-lightgrey-transparent);     
+}
+
+nav{
+    /* Disposición */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* Dimensiones */ 
+    height: inherit;
+    width: 90vw;
+    min-width: 60vw;
+    overflow-x: hidden;
+}
+
+#header-links{
+    /* Disposición */
+    display: flex;
+    /* Estilos de lista */
+    list-style-type: none;  
+}
+
+#header-links li:not(:last-child){
+    /* Dimensiones */ 
+    padding-right: 2.5vw;
+}
+
+/*Estilos de etiqueta Main */
 main{
+    /* Disposición */
+    /* position: relative; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 75%;
-    margin: auto;
+    justify-content: center;
+    /* Dimensiones */
+    width: 75%;   
 }
 
+/*Estilos de sección de descripción */
 #description{
+    /* Disposición */
     display: flex;
-    height: 60vh;
-    justify-content:space-between;
     align-items: center;
+    justify-content:space-between;
+    /* Dimensiones */
+    height: auto;
 }
 
-#description div{
+#description>div{
+    /* Disposición */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
     align-items:baseline;
+    justify-content: center;
+    /* Dimensiones */
+    width: 50%; 
+}
+
+#description h1{
+    /* Dimensiones */
+    width: 90%;
+    /* Texto */
+    font-size: 3rem;   
 }
 
 #description p{
-   color: var(--secondary-color-greyblue); 
-   width: 50%;
-   margin: 4vh 0;
-   font-size: 1.4rem;
-   line-height: 2.2rem;
-}
-
-h1{
-    font-size: 3vw;
+    /* Dimensiones */
     width: 70%;
+    min-width: 300px;
+    margin: 4vh 0;
+    /* Texto */
+    color: var(--secondary-color-greyblue); 
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
 #description img{
-    min-width: 400px;
-    height: 50vh;
+    /* Dimensiones */
+    width: 60%;
 }
 
+/* Estilos de sección de características */
 #traits{
+    /* Disposición */
     display: flex;
-    justify-content:space-between;
     align-items: flex-start;
+    justify-content:space-between;
+    /* Dimensiones */
+    margin-top:12vh;
 }
 
-#traits div{
+#traits>div{
+    /* Disposición */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #traits h3{
-    font-size: 2vw;
-    width: 90%;
+    /* Texto */
+    font-size: 2.2rem;
 }
 
 #traits>div>p{
-    color: var(--secondary-color-greyblue); 
-    width: 70%;
-    margin: 4vh 0;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
- }
+    /* Dimensiones */
+    width: 83%;
+    min-width: 250px;
+    margin: 3vh 0;
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+    font-size: 1rem;
+    line-height: 2rem;
+}
 
-/* Modification to li's styles - starts here
-I made this so they start with a 0 and also don't finish with a dot */
+/* Modificación de la numeración de lista - Empieza acá
+
+Hice este cambio para que los números empiecen en 0 y que no terminen
+con un punto */
 #traits ol { 
-    counter-reset:list-number;
-    list-style-type: none;
+    /* Dimensiones */
     margin-left: 6vw;
+    /* Estilos de lista */
+    list-style-type: none;
+    /* Contador para los números de la lista */
+    counter-reset:list-number;  
 }
 
 #traits li::before { 
+    /* Disposición */
+    float: left;
+    /* Dimensiones */
+    padding: 10px 22px;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
+    border: none;
+    border-radius: 30px;
+    /* Texto */
+    color: var(--primary-color-grey);
+    font-weight: 500;
+    /* Contenido para numerar la lista e incremento del contador */
     content: counter(list-number, decimal-leading-zero); 
     counter-increment: list-number;
-    float: left;
-    background-color: var(--primary-color-orange);
-    color: var(--primary-color-grey);
-    border: none;
-    padding: 12px 30px;
-    font-weight: 500;
-    border-radius: 30px;
-  }
-/* Modification to li's styles - ends here */
+}
+/* Modificación de la numeración de lista - Termina acá */
+
 #traits ol p{
-   margin-left: 6vw;
+    /* Dimensiones */
+    margin-left: 6rem;
+    /* Texto */
+    font-size: 1rem;
 }
 
-/* This will change the traits titles' styles */
+/* Modificación al título de cada característica*/
 #traits li>p:first-child{
+    /* Texto */
     color: var(--primary-color-blue);
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 700; 
 }
 
-/* This will change the traits descriptions' styles */
+/* Modificación a la descripción de cada característica */
 #traits li>p:nth-child(2){
-    color: var(--secondary-color-greyblue); 
-    text-align: justify;
-    width: 70%;
+    /* Dimensiones */
+    width: 76%;
     margin-top: 2vh;
     margin-bottom: 5vh;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
- }
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+    line-height: 2rem;
+}
 
-/*Opinions, slides' styles*/
+/* Estilos de sección de opiniones*/
 #opinions{
+    /* Disposición */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 3vh;
+    flex-direction: column;
+    /* Dimensiones */
+    margin-top:5.5rem;    
 }
 
 #opinions h3{
-    font-size: 2vw;
+    /* Dimensiones */
+    margin-bottom: 2rem;
+    /* Texto */
+    font-size: 2.2rem;
 }
 
 #slides{
+    /* Disposición */
     display: flex;
-    width: 90vw;
+    align-items: baseline;
+    /* Dimensiones */
+    width: 100vw;
+    margin-bottom: 6rem;
     padding-top: 5vh;
+    /* Visibilidad */
+    overflow-x: scroll;
+    scroll-behavior: smooth;   
+}
+
+/* Estilos de la scrollbar  */
+#slides::-webkit-scrollbar{
+    /* Dimensiones */
+    width: 30px;
+}
+#slides::-webkit-scrollbar-thumb {
+    /* Background y borde */
+    background-color: #000;
+    border-radius: 4px;
 }
 
 .people{
+    /* Disposición */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    /* Dimensiones */
+             /* min-width: 160px; */
+    min-width: 460px;
 }
 
-/* This will change the names' styles */
+.people:not(:last-child){
+    /* Dimensiones */
+    margin-right: 9vw;
+}
+
+.people img{
+    /* Dimensiones */
+    width: 4.4rem;
+}
+
+/* Estilo de los nombres de cada persona */
 .people>p:nth-child(2){
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2.5rem;
+    /* Texto */
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 4rem;
  }
 
-/* This will change the descriptions' style */
+/* Estilo de las opiniones de cada persona */
 .people>p:nth-child(3){
+    /* Texto */
     color: var(--secondary-color-greyblue); 
-    font-size: 1.3rem;
-    line-height: 2.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
  }
 
+
+
+/* Estilo de sección de ad */
 #join-ad{
-    background-color: var(--primary-color-orange);
-    height: 22vh;
-    width: 100vw;
-    margin-top: 15vh;
+    /* Disposición */
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    /* Dimensiones */
+    height: 15.5vw;
+    min-height: 100px;
+    width: 100vw;
+    margin-top: 12rem;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
     background-image: url(../img/bg-simplify-section-desktop.svg);
     background-size: cover;
 }
 
 #join-ad p{
-    font-size: 2vw;
-    font-weight: 700;
-    color: var(--primary-color-grey);
+    /* Dimensiones */
     width: 30%;
+    /* Texto */
+    color: var(--primary-color-grey);
+    font-size: 2.3vw;
+    font-weight: 700;   
 }
 
 #join-ad button{
+    /* Background y borde */
     background-color: var(--primary-color-grey);
-    color: var(--primary-color-orange);
     box-shadow: none;
+    /* Texto */
+    color: var(--primary-color-orange);
 }
 
+#join-ad button:hover{
+    /* Texto */
+    color: var(--secondary-color-orange);
+}
+
+/* Estilos del footer */
 footer{
-    background-color: var(--secondary-color-blue);
+    /* Disposición */
     display: flex;
+    align-items:center;
     justify-content: space-evenly;
-    align-items: center;
-    height: 28vh;
+    /* Dimensiones */
+    height: 17.2vw;
+    min-height: 300px;
+    width: 100vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    /* Background y borde */
+    background-color: var(--secondary-color-blue);  
 }
 
-/* SNS styles, logos change on hover*/
+/* Estilos de redes sociales, cambio de color al hover en cada SN*/
 #sns{
+    /* Disposición */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
+    justify-content: space-around;
+    /* Dimensiones */
+    height: 12rem;
+    padding-right: 3vw;
+}
+
+/* Disposición de los logos de redes y de logo de página */
+.logo, .negative, #sns>img{
+    /* Disposición */
+    position: relative;
+    top: -2rem;
 }
 
 #sns-links{
-position: relative;
+    /* Disposición */
+    position: relative;
 }
 
+/* Usé rem como medida de posición para que cuando el width de la página se mueva
+desde medida x hasta 769px, los logos no se superpongan, cosa que sí pasaba con 
+vw o vh */
 .fb-logo{
+    /* Disposición */
     position: absolute;
     left: 0; 
 }
 
 .yt-logo{
+    /* Disposición */
     position: absolute;
-    left: 4vh; 
+    left: 2.5rem; 
 }
 
 .tw-logo{
+    /* Disposición */
     position: absolute;
-    left: 8vh; 
+    left: 5rem; 
 }
 
 .pin-logo{
+    /* Disposición */
     position: absolute;
-    left: 12vh; 
+    left: 7.5rem; 
 }
 
 .ig-logo{
+    /* Disposición */
     position: absolute;
-    left: 16vh; 
+    left: 10rem; 
 }
 
 .fb-logo img, .yt-logo img, .tw-logo img,
 .pin-logo img, .ig-logo img{
+    /* Disposición */
     position: absolute;
     margin: 0;
 }
 
-/* Opacity to 0 so it doesn't show when not hovered, then changed to 1 when
-hovered to reveal itself */
+/* Opacidad a 0 par que el logo no se muestre mientras no se le haga hover, 
+al hacerle hover, opacidad a 1 */
 .negative{
+    /* Disposición */
     position: absolute;
+    /* Visibilidad */
     opacity: 0;
 }
 
 .fb-logo:hover .negative, .yt-logo:hover .negative, 
 .tw-logo:hover .negative, .pin-logo:hover .negative, 
 .ig-logo:hover .negative{
-   opacity: 1;
+    /* Visibilidad */
+    opacity: 1;
 }
 
-/* Opacity to 0, when hovered it leaves a weird shadow behind the negative logo
-so I'm hiding it */
+/* Opacidad a 0 para el logo original cuando se le hace hover, porque 
+sino deja una sombra blanca rara detrás del logo negativo */
 .fb-logo:hover .logo, .yt-logo:hover .logo, 
 .tw-logo:hover .logo, .pin-logo:hover .logo, 
 .ig-logo:hover .logo{
-   opacity: 0;
+    /* Visibilidad */
+    opacity: 0;
 }
 
-/* Footer links' styles (anchors to the rest of the website)*/
+/* Estilos de los links anclas del footer */
 #footer-links{
-    width: 40vw;
+    /* Dimensiones */
+    width: 35vw;
 }
 
 #footer-links ul{
-    height: 18vh;
+    /* Disposición */
     display: flex;
     flex-direction: column;
-    align-items: left;
     flex-wrap: wrap;
-    margin-left: 10vh;
+    align-items: left;
+    /* Dimensiones */
+    height: 12rem;
+    max-height: 300px;
+    margin-left: 3rem;
 }
 
 #footer-links li{
-    list-style-type: none;
+    /* Dimensiones */
+    padding-right: 2rem; 
+    padding-bottom: 1.5rem;
+    /* Texto */
     color: var(--primary-color-grey);
-    line-height: 3rem; 
-    text-align: left;
+    /* Estilos de lista */
+    list-style-type: none;    
 }
 
-/* Newsletter's style */
+footer a:hover{
+    /* Texto */
+    color: var(--primary-color-orange);
+}
+
+/* Estilos del newsletter */
 #newsletter{
-    height: 100%;
+    /* Disposición */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    /* Dimensiones */
+    height: 12rem;
+    width: 25vw;
+    min-width: 200px;    
 }
 
-#newsletter p{
+form{
+    /* Disposición */
+    position: relative;
+    top: -2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;    
+}
+
+#input-field{
+    /* Disposición */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Dimensiones */
+    padding-bottom: 1rem;
+}
+
+form input{
+    /* Dimensiones */
+    margin-bottom: 0.7rem;
+}
+
+/* Mensaje de error para mail mal ingresado, 
+display none para que no aparezca hasta que no sea necesario */
+#input-field #error-message{
+    /* Disposición */
+    display: none;
+    /* Dimensiones */
+    padding-left: 0.8rem;
+    /* Texto */
+    color: var(--secondary-color-error-red);
+    font-size: 0.7rem;
+    font-style:italic;
+    font-weight: 400;   
+}
+
+/* Párrafo del copyright */
+#newsletter>p{
+    /* Texto */
     color: var(--secondary-color-greyblue);
-}
-
-#newsletter button{
-    box-shadow: none;
-    width: 9vh;
-    margin-left: 2vh;
+    text-align: right;
 }
 
 #newsletter input{
-    background-color: var(--primary-color-grey);
-    border: none;
-    width: 30vh;
+    /* Dimensiones */
     height: 5vh;
-    font-size: large;
-    font-weight: 700;
+    min-height: 40px;
+    max-height: 50px;
+    width: 16vw;
+    min-width: 200px;
+    max-width: 300px;
+    padding-left: 1rem;
+    /* Background y borde */
+    background-color: var(--primary-color-grey);
     border-radius: 30px;
+    /* Texto */
+    font-size: 1rem; /*Si no hay fontsize definida, en firefox aparece más chica la fuente*/
+    font-weight: 500;
 }
 
 #newsletter input::placeholder{
-    padding-left: 2vh;
-    font-weight: 500;
+    /* Texto */
     color: var(--secondary-color-greyblue);
+    font-size: 1rem;
+    font-weight: 500;
+    /* Visibilidad */
+    opacity: 1; /* Firefox no muestra opacidad 100% en los placeholders */
 }
+
+/* Selecciono la casilla de input, cuando no está en focus ni tampoco
+se encuentra el placeholder(es decir que hay texto dentro),y que además 
+el texto ingresado es inválido, para modificar tanto la casilla del input
+como el mensaje de error */
+#newsletter input:not(:focus):not(:placeholder-shown):invalid{
+    /* Background y borde */
+    border: solid 2px var(--secondary-color-error-red);
+    /* Texto */
+    color: var(--secondary-color-error-red);
+}
+
+#newsletter input:not(:focus):not(:placeholder-shown):invalid ~ #error-message{
+    /* Disposición */
+    display: inline-block;
+}
+
+#newsletter button{
+    /* Dimensiones */
+    width: 10vw;
+    min-width: 60px;
+    max-width: 80px;
+    margin-left: 1rem;
+    /* Background y borde */
+    box-shadow: none;
+}
+
 
 
 
 /* 24/6 - gotta finish the slides
 -maybe try a slideshow? 
--also gotta finish main and start footer.
--change the tab icon?
+-also gotta finish main and start footer. ----check
+-change the tab icon? ------------------------check
 -Investigate light-dark colormodes */
 
 
 /* 25/6 - makeit responsive
 -slides
--still needing the tab icon
--hover styles on buttons
+-still needing the tab icon ------------------check
+-hover styles on buttons ---------------------check
  */
 
 
 
-/* @media (max-width: 680px) {
+/* @media (max-width: 768px) {
    
 } */
 

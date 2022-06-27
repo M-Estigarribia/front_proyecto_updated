@@ -11,13 +11,13 @@
     /* Colores primarios */
     --primary-color-orange: rgb(242, 95, 58);
     --primary-color-blue: rgb(35, 44, 81);
-    --primary-color-grey: rgb(255, 255, 255); 
+    --primary-color-white: rgb(255, 255, 255); 
 
     /* Colores secundarios */
     --secondary-color-white: rgb(255, 239, 234);
     --secondary-color-blue: rgb(29, 30, 37);
     --secondary-color-greyblue: rgb(143, 148, 167);
-    --secondary-color-lightgrey: rgb(249, 249, 249);
+    --secondary-color-lightgrey: rgb(241, 225, 225);
     --secondary-color-orange: rgb(250, 143, 116);
     --secondary-color-error-red: rgb(156, 73, 82);
 
@@ -35,7 +35,7 @@ body{
     /* Dimensiones */
     width: 100vw;
     /* Fondo */
-    background-color: var(--primary-color-grey);
+    background-color: var(--primary-color-white);
     background-image: url(../img/bg-tablet-pattern.svg);
     background-position: left;
     background-repeat:space;
@@ -62,8 +62,8 @@ button{
     border-radius: 30px;
     box-shadow: 0 7px 15px var(--primary-color-orange-transparent);
     /* Texto */
-    color: var(--primary-color-grey);
-    font-size: 1rem;
+    color: var(--primary-color-white);
+    font-size: 0.83rem;
     font-weight: 700;
 }
 
@@ -77,6 +77,7 @@ button:hover{
 a{
     /* Texto */
     color: inherit;
+    font-size: 0.8rem;
     font-weight: 400;
     text-decoration: none;
 }
@@ -96,10 +97,11 @@ header{
     align-items: center;
     justify-content: center; 
     /* Dimensiones */
-    height: 12vh;
+    height: 14vh;
     min-height: 103px;
     width: 100vw;
     padding: 50px 0;
+    margin-bottom: 6rem;
     /* Background */
     background-color: var(--secondary-color-lightgrey-transparent);     
 }
@@ -111,7 +113,7 @@ nav{
     justify-content: space-around;
     /* Dimensiones */ 
     height: inherit;
-    width: 90vw;
+    width: 93vw;
     min-width: 60vw;
     overflow-x: hidden;
 }
@@ -137,7 +139,7 @@ main{
     align-items: center;
     justify-content: center;
     /* Dimensiones */
-    width: 75%;   
+    width: 79%;
 }
 
 /*Estilos de sección de descripción */
@@ -164,12 +166,12 @@ main{
     /* Dimensiones */
     width: 90%;
     /* Texto */
-    font-size: 3rem;   
+    font-size: 3.6rem;   
 }
 
 #description p{
     /* Dimensiones */
-    width: 70%;
+    width: 61%;
     min-width: 300px;
     margin: 4vh 0;
     /* Texto */
@@ -180,7 +182,7 @@ main{
 
 #description img{
     /* Dimensiones */
-    width: 60%;
+    width: 46.8%;
 }
 
 /* Estilos de sección de características */
@@ -202,7 +204,8 @@ main{
 
 #traits h3{
     /* Texto */
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    width: 120%;
 }
 
 #traits>div>p{
@@ -222,7 +225,7 @@ Hice este cambio para que los números empiecen en 0 y que no terminen
 con un punto */
 #traits ol { 
     /* Dimensiones */
-    margin-left: 6vw;
+    margin-left: 10vw;
     /* Estilos de lista */
     list-style-type: none;
     /* Contador para los números de la lista */
@@ -239,7 +242,7 @@ con un punto */
     border: none;
     border-radius: 30px;
     /* Texto */
-    color: var(--primary-color-grey);
+    color: var(--primary-color-white);
     font-weight: 500;
     /* Contenido para numerar la lista e incremento del contador */
     content: counter(list-number, decimal-leading-zero); 
@@ -256,15 +259,18 @@ con un punto */
 
 /* Modificación al título de cada característica*/
 #traits li>p:first-child{
+    /* Disposición */
+    position: relative;
+    top: 0.3rem;
     /* Texto */
     color: var(--primary-color-blue);
-    font-weight: 700; 
+    font-weight: 700;   
 }
 
 /* Modificación a la descripción de cada característica */
 #traits li>p:nth-child(2){
     /* Dimensiones */
-    width: 76%;
+    width: 78%;
     margin-top: 2vh;
     margin-bottom: 5vh;
     /* Texto */
@@ -294,23 +300,15 @@ con un punto */
     display: flex;
     align-items: baseline;
     /* Dimensiones */
-    width: 100vw;
-    margin-bottom: 6rem;
+    width: 95vw;
+    margin-bottom: 3rem;
     padding-top: 5vh;
     /* Visibilidad */
-    overflow-x: scroll;
-    scroll-behavior: smooth;   
-}
-
-/* Estilos de la scrollbar  */
-#slides::-webkit-scrollbar{
-    /* Dimensiones */
-    width: 30px;
-}
-#slides::-webkit-scrollbar-thumb {
-    /* Background y borde */
-    background-color: #000;
-    border-radius: 4px;
+    overflow-x: scroll; 
+    /* Configuración de scrollbar para mozilla */
+    scrollbar-color: var(--secondary-color-lightgrey) rgba(0, 0, 0, 0); 
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
 }
 
 .people{
@@ -322,6 +320,7 @@ con un punto */
     /* Dimensiones */
              /* min-width: 160px; */
     min-width: 460px;
+    padding-bottom: 3rem;
 }
 
 .people:not(:last-child){
@@ -351,19 +350,38 @@ con un punto */
     text-align: center;
  }
 
+ /* Estilos de la scrollbar  */
+#slides::-webkit-scrollbar{
+    /* Dimensiones */
+    height: 9px;   
+}
 
+#slides::-webkit-scrollbar-thumb {
+    /* Disposición */
+    display: none;
+    /* Background y borde */
+    background-color: var(--secondary-color-lightgrey);
+    border-radius: 4px;    
+}
+
+/* Para que se la scrollbar se modifique al hoverear la sección slides */
+#slides:hover::-webkit-scrollbar-thumb{
+    /* Disposición */
+    display: block;  
+}
 
 /* Estilo de sección de ad */
 #join-ad{
     /* Disposición */
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     /* Dimensiones */
     height: 15.5vw;
     min-height: 100px;
     width: 100vw;
     margin-top: 12rem;
+    padding: 0 11vw;
     /* Background y borde */
     background-color: var(--primary-color-orange);
     background-image: url(../img/bg-simplify-section-desktop.svg);
@@ -372,16 +390,16 @@ con un punto */
 
 #join-ad p{
     /* Dimensiones */
-    width: 30%;
+    width: 40%;
     /* Texto */
-    color: var(--primary-color-grey);
-    font-size: 2.3vw;
+    color: var(--primary-color-white);
+    font-size: 2.5vw;
     font-weight: 700;   
 }
 
 #join-ad button{
     /* Background y borde */
-    background-color: var(--primary-color-grey);
+    background-color: var(--primary-color-white);
     box-shadow: none;
     /* Texto */
     color: var(--primary-color-orange);
@@ -443,25 +461,25 @@ vw o vh */
 .yt-logo{
     /* Disposición */
     position: absolute;
-    left: 2.5rem; 
+    left: 2rem; 
 }
 
 .tw-logo{
     /* Disposición */
     position: absolute;
-    left: 5rem; 
+    left: 4rem; 
 }
 
 .pin-logo{
     /* Disposición */
     position: absolute;
-    left: 7.5rem; 
+    left: 6rem; 
 }
 
 .ig-logo{
     /* Disposición */
     position: absolute;
-    left: 10rem; 
+    left: 8rem; 
 }
 
 .fb-logo img, .yt-logo img, .tw-logo img,
@@ -499,7 +517,7 @@ sino deja una sombra blanca rara detrás del logo negativo */
 /* Estilos de los links anclas del footer */
 #footer-links{
     /* Dimensiones */
-    width: 35vw;
+    width: 40vw;
 }
 
 #footer-links ul{
@@ -519,9 +537,14 @@ sino deja una sombra blanca rara detrás del logo negativo */
     padding-right: 2rem; 
     padding-bottom: 1.5rem;
     /* Texto */
-    color: var(--primary-color-grey);
+    color: var(--primary-color-white);
     /* Estilos de lista */
     list-style-type: none;    
+}
+
+footer a{
+    /* Texto */
+    font-size: 1rem;
 }
 
 footer a:hover{
@@ -538,7 +561,7 @@ footer a:hover{
     justify-content: space-around;
     /* Dimensiones */
     height: 12rem;
-    width: 25vw;
+    width: 22.7vw;
     min-width: 200px;    
 }
 
@@ -560,11 +583,6 @@ form{
     padding-bottom: 1rem;
 }
 
-form input{
-    /* Dimensiones */
-    margin-bottom: 0.7rem;
-}
-
 /* Mensaje de error para mail mal ingresado, 
 display none para que no aparezca hasta que no sea necesario */
 #input-field #error-message{
@@ -583,6 +601,7 @@ display none para que no aparezca hasta que no sea necesario */
 #newsletter>p{
     /* Texto */
     color: var(--secondary-color-greyblue);
+    font-size: 0.8rem;
     text-align: right;
 }
 
@@ -595,8 +614,10 @@ display none para que no aparezca hasta que no sea necesario */
     min-width: 200px;
     max-width: 300px;
     padding-left: 1rem;
+    margin-bottom: 0.7rem;
     /* Background y borde */
-    background-color: var(--primary-color-grey);
+    background-color: var(--primary-color-white);
+    border: none;
     border-radius: 30px;
     /* Texto */
     font-size: 1rem; /*Si no hay fontsize definida, en firefox aparece más chica la fuente*/
@@ -639,22 +660,32 @@ como el mensaje de error */
 }
 
 
-
-
-/* 24/6 - gotta finish the slides
+/* no date on check means same day
+-------24/6 
+- gotta finish the slides --------------------check 26/6
 -maybe try a slideshow? 
--also gotta finish main and start footer. ----check
--change the tab icon? ------------------------check
--Investigate light-dark colormodes */
+-also gotta finish main and start footer -----check 25/6
+-change the tab icon? ------------------------check 25/6
+-Investigate light-dark colormodes
+
+-------25/6 
+- makeit responsive
+-slides --------------------------------------check 26/6
+-still needing the tab icon ------------------check 26/6
+-hover styles on buttons ---------------------check 26/6
 
 
-/* 25/6 - makeit responsive
--slides
--still needing the tab icon ------------------check
--hover styles on buttons ---------------------check
- */
 
+-------26/6 
+-padding del navbar --------------------------check
+-modificar tamaño links navbar ---------------check
+-alinear numeros de ol al texto --------------check
+-alinear texto de las descripciones ----------check
+-cambiar personmas de lugar ------------------check
+-cambiar tamaño copyright --------------------check
+-padding de la box de ad ---------------------check
 
+*/
 
 /* @media (max-width: 768px) {
    

@@ -13,8 +13,10 @@
 <body>
     <header>
         <nav>
-            <img src="img/logo.svg" alt="manage logo">
-            <div >
+            <div class="company-logo"></div>
+            <input type="checkbox" class="menu-toggler">
+            <div class="burger-menu"></div>
+            <div class="menu-links">
                 <ul id="header-links">
                     <li><a href="">Pricing</a></li>
                     <li><a href="">Product</a></li>
@@ -49,16 +51,17 @@
             
             <ol>
                 <li>
-                    <p>Track company-wide progress</p>
+                    <div><p>Track company-wide progress</p></div>
                     <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
                 </li>
 
-                <li><p>Advance built-in reports</p>
+                <li>
+                    <div><p>Advance built-in reports</p></div>
                     <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
                 </li>
 
                 <li>
-                    <p>Everything you need in one place</p>
+                    <div><p>Everything you need in one place</p></div>
                     <p>Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
                 </li>
             </ol>
@@ -66,42 +69,54 @@
         </section>
 
         <section id="opinions">
-            <h3>What they've said</h3>
-
+            <h3>What they've said</h3>   
             <div id="slides">
-                <div class="people">
-                    <img src="img/avatar-anisha.png" alt="Anisha's Photo">
+                <label class="person-slide" for="first-person">
+                    <input type="radio" name="slides" id="first-person" checked>
+                    <div class="people anisha">
+                        <img src="img/avatar-anisha.png" alt="Anisha's Photo">
+                        <div class="slide-buttons"><img src="img/first-checkbox.svg" alt=""></div>
 
-                    <p>Anisha Li</p>
+                        <p>Anisha Li</p>
 
-                    <p>“Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
-                </div>
+                        <p>“Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+                    </div>
+                </label>
 
-                <div class="people">
-                    <img src="img/avatar-ali.png" alt="Ali's Photo">
+                <label class="person-slide" for="second-person">
+                    <input type="radio" name="slides" id="second-person">
+                    <div class="people ali">
+                        <img src="img/avatar-ali.png" alt="Ali's Photo">
+                        <div class="slide-buttons"><img src="img/second-checkbox.svg" alt=""></div>
 
-                    <p>Ali Bravo</p>
+                        <p>Ali Bravo</p>
 
-                    <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
-                </div>
+                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
+                    </div>
+                </label>
 
-                <div class="people">
-                    <img src="img/avatar-richard.png" alt="Richard's Photo">
+                <label class="person-slide" for="third-person">
+                    <input type="radio" name="slides" id="third-person">
+                    <div class="people richard">
+                        <img src="img/avatar-richard.png" alt="Richard's Photo">
+                        <div class="slide-buttons"><img src="img/third-checkbox.svg" alt=""></div>
+                        <p>Richard Watts</p>
 
-                    <p>Richard Watts</p>
+                        <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can't stop recommending them to everyone i talk to!”</p>
+                    </div>
+                </label>
 
-                    <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can't stop recommending them to everyone i talk to!”</p>
-                </div>
+                <label class="person-slide" for="fourth-person">
+                    <input type="radio" name="slides" id="fourth-person">
+                    <div class="people shanai">
+                        <img src="img/avatar-shanai.png" alt="Shanai's Photo">
+                        <div class="slide-buttons"><img src="img/fourth-checkbox.svg" alt=""></div>
+                        <p>Shanai</p>
 
-                <div class="people">
-                    <img src="img/avatar-shanai.png" alt="Shanai's Photo">
-
-                    <p>Shanai</p>
-
-                    <p>“Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
-                </div>
+                        <p>“Manage has supercharged our team's workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
+                    </div>
+                </label>
             </div>
-
             <button>Get Started</button>
         </section>
 
@@ -115,42 +130,12 @@
     <footer> 
         <div id="sns"><!--Social Network Sites-->
             <img src="img/logo-negative.png" alt="manage logo">
-
-            <div id="sns-links"> 
-                <div class="fb-logo">
-                    <a href="">
-                        <img src="img/icon-facebook.svg" class="logo" alt="Facebook profile">
-                        <img src="img/icon-facebook-negative.svg" class="negative" alt="Facebook profile negative icon">
-                    </a>
-                </div>
-                
-                <div class="yt-logo">
-                    <a href="">
-                        <img src="img/icon-youtube.svg" class="logo" alt="Youtube profile">
-                        <img src="img/icon-youtube-negative.svg" class="negative" alt="Youtube profile negative icon">
-                    </a>
-                </div>
-                    
-                <div class="tw-logo">
-                    <a href="">
-                        <img src="img/icon-twitter.svg" class="logo" alt="Twitter profile">
-                        <img src="img/icon-twitter-negative.svg" class="negative" alt="Twitter profile negative icon">
-                    </a>
-                </div>
-
-                <div class="pin-logo">
-                    <a href="">
-                        <img src="img/icon-pinterest.svg" class="logo" alt="Pinterest profile">
-                        <img src="img/icon-pinterest-negative.svg" class="negative" alt="Pinterest profile negative icon">
-                    </a>
-                </div>
-
-                <div class="ig-logo">
-                    <a href="">
-                        <img src="img/icon-instagram.svg" class="logo" alt="Instagram profile">
-                        <img src="img/icon-instagram-negative.svg" class="negative" alt="Instagram profile negative icon">
-                    </a>
-                </div>                
+            <div id="sns-links">
+                <div class="logo fb-icon"><a href=""></a></div>
+                <div class="logo yt-icon"><a href=""></a></div>
+                <div class="logo tw-icon"><a href=""></a></div>
+                <div class="logo pin-icon"><a href=""></a></div>
+                <div class="logo ig-icon"><a href=""></a></div>
             </div>
         </div>
         
@@ -165,6 +150,7 @@
                 <li><a href="">Privacy Policy</a></li>
             </ul>
         </div> 
+
         <div id="newsletter">
             <form action="" method="">
                 <div id="input-field">

@@ -764,7 +764,7 @@ como el mensaje de error */
     input[type=radio]{
         /* Disposición */
         position: relative;
-        top: 37vh;
+        top: 20.8rem;
         z-index: 3;
         /* Dimensiones */
         height: 12px;
@@ -775,7 +775,7 @@ como el mensaje de error */
     .slide-buttons{
         /* Disposición */
         position: relative;
-        top: 29vh;
+        top: 16rem;
         z-index:2;
         /* Dimensiones */
         width: 70px;   
@@ -787,7 +787,7 @@ como el mensaje de error */
         justify-content: center;
         /* Dimensiones */
         height: 12px;
-        width: 2vh;
+        width: 18px;
     }
     
     .people{

@@ -237,7 +237,7 @@ con un punto */
 
 .people img{
     /* Dimensiones */
-    width: 4.4rem;
+    width: 75px;
 }
 
 /* Estilo de los nombres de cada persona */
@@ -786,6 +786,7 @@ como el mensaje de error */
         display: flex;
         justify-content: center;
         /* Dimensiones */
+        height: 12px;
         width: 2vh;
     }
     

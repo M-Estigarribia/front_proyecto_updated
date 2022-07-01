@@ -7,26 +7,30 @@
 }
 
 :root{
-    /* gotta check, let's see if I can change the colors */
-    /* Colores primarios */
-    --primary-color-orange: rgb(242, 95, 58);
+    /* --------Colores primarios-------- */
     --primary-color-blue: rgb(35, 44, 81);
-    --primary-color-white: rgb(255, 255, 255); 
-
-    /* Colores secundarios */
-    --secondary-color-white: rgb(255, 239, 234);
+    --primary-color-orange: rgb(242, 95, 58);
+    --primary-color-white: rgb(255, 255, 255);
+    /* --------Colores secundarios-------- */
+        /* Azules */
     --secondary-color-blue: rgb(29, 30, 37);
-    --secondary-color-greyblue: rgb(143, 148, 167);
-    --secondary-color-lightgrey: rgb(241, 225, 225);
+    --secondary-color-blue-hover: rgb(78, 96, 158);
+    --secondary-color-darkblue: rgb(24, 24, 27);
+        /* Rojizos */
     --secondary-color-orange: rgb(250, 143, 116);
     --secondary-color-error-red: rgb(156, 73, 82);
-
-    /*Variantes transparentes*/
-    --primary-color-orange-transparent: rgb(242, 95, 58, 0.6);
-    --secondary-color-lightgrey-transparent: rgba(249, 249, 249,0.9);
+    --secondary-color-error-red-2: rgb(238, 194, 194);
+        /* Blancos-negros */
+    --secondary-color-white: rgb(255, 239, 234);
+    --secondary-color-lightgrey: rgb(241, 225, 225);
+    --secondary-color-greyblue: rgb(143, 148, 167);
+    /*--------Variantes transparentes--------*/
+    --secondary-color-darkblue-transparent: rgba(24, 24, 27, 0.95);
+    --primary-color-orange-transparent: rgba(242, 95, 58, 0.6);
+    --secondary-color-lightgrey-transparent: rgba(249, 249, 249,0.9);  
 }
 
-/* Estilos generales - body, botones, enlaces */
+/* --------Estilos generales-------- */
 body{
     /* Disposición */
     display: flex;
@@ -34,12 +38,8 @@ body{
     flex-direction: column;
     /* Dimensiones */
     width: 100vw;
-    /* Fondo */
+    /* Background */
     background-color: var(--primary-color-white);
-    background-image: url(../img/bg-tablet-pattern.svg);
-    background-position: left;
-    background-repeat:space;
-    background-size:70rem;
     /* Texto */
     color: var(--primary-color-blue);
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -71,37 +71,26 @@ button:hover{
     /* Background */
     background-color: var(--secondary-color-orange);
     /* Texto */
-    color: var(--secondary-color-white);  
+    color: var(--secondary-color-white);
+    /* Estilo del cursor */
+    cursor: pointer;
 }
 
 a{
     /* Texto */
-    color: inherit;
-    font-size: 0.8rem;
-    font-weight: 400;
     text-decoration: none;
 }
 
-a:hover{
-    /* Texto */
-    color: var(--secondary-color-greyblue);
-}
-
-/* Estilos del header */
+/* --------Estilos del header-------- */
 header{
     /* Disposición */
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     align-items: center;
-    justify-content: center; 
     /* Dimensiones */
-    height: 14vh;
-    min-height: 103px;
     width: 100vw;
-    padding: 50px 0;
-    margin-bottom: 6rem;
     /* Background */
     background-color: var(--secondary-color-lightgrey-transparent);     
 }
@@ -109,37 +98,31 @@ header{
 nav{
     /* Disposición */
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     /* Dimensiones */ 
-    height: inherit;
-    width: 93vw;
-    min-width: 60vw;
     overflow-x: hidden;
 }
 
-#header-links{
-    /* Disposición */
-    display: flex;
+.company-logo{
+     /* Background */
+    background-image: url(../img/logo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-links>ul{
     /* Estilos de lista */
     list-style-type: none;  
+    /* Disposición */
+    display: flex;
 }
 
-#header-links li:not(:last-child){
-    /* Dimensiones */ 
-    padding-right: 2.5vw;
-}
-
-/*Estilos de etiqueta Main */
+/* --------Estilos de etiqueta Main-------- */
 main{
     /* Disposición */
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Dimensiones */
-    width: 79%;
 }
 
 /*Estilos de sección de descripción */
@@ -147,7 +130,6 @@ main{
     /* Disposición */
     display: flex;
     align-items: center;
-    justify-content:space-between;
     /* Dimensiones */
     height: auto;
 }
@@ -156,41 +138,23 @@ main{
     /* Disposición */
     display: flex;
     flex-direction: column;
-    align-items:baseline;
     justify-content: center;
-    /* Dimensiones */
-    width: 50%; 
-}
-
-#description h1{
-    /* Dimensiones */
-    width: 90%;
-    /* Texto */
-    font-size: 3.6rem;   
 }
 
 #description p{
     /* Dimensiones */
     width: 61%;
     min-width: 300px;
-    margin: 4vh 0;
     /* Texto */
     color: var(--secondary-color-greyblue); 
     font-size: 1rem;
     line-height: 2rem;
 }
 
-#description img{
-    /* Dimensiones */
-    width: 46.8%;
-}
-
 /* Estilos de sección de características */
 #traits{
     /* Disposición */
     display: flex;
-    align-items: flex-start;
-    justify-content:space-between;
     /* Dimensiones */
     margin-top:12vh;
 }
@@ -199,33 +163,18 @@ main{
     /* Disposición */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-#traits h3{
-    /* Texto */
-    font-size: 2.5rem;
-    width: 120%;
 }
 
 #traits>div>p{
-    /* Dimensiones */
-    width: 83%;
-    min-width: 250px;
-    margin: 3vh 0;
     /* Texto */
     color: var(--secondary-color-greyblue);
-    font-size: 1rem;
-    line-height: 2rem;
+
 }
 
-/* Modificación de la numeración de lista - Empieza acá
-
+/* -------Modificación de la numeración de lista/Empieza acá-------
 Hice este cambio para que los números empiecen en 0 y que no terminen
 con un punto */
 #traits ol { 
-    /* Dimensiones */
-    margin-left: 10vw;
     /* Estilos de lista */
     list-style-type: none;
     /* Contador para los números de la lista */
@@ -235,8 +184,6 @@ con un punto */
 #traits li::before { 
     /* Disposición */
     float: left;
-    /* Dimensiones */
-    padding: 10px 22px;
     /* Background y borde */
     background-color: var(--primary-color-orange);
     border: none;
@@ -248,67 +195,34 @@ con un punto */
     content: counter(list-number, decimal-leading-zero); 
     counter-increment: list-number;
 }
-/* Modificación de la numeración de lista - Termina acá */
-
-#traits ol p{
-    /* Dimensiones */
-    margin-left: 6rem;
-    /* Texto */
-    font-size: 1rem;
-}
-
+/* -------Modificación de la numeración de lista/Termina acá------- */
+    
 /* Modificación al título de cada característica*/
-#traits li>p:first-child{
-    /* Disposición */
-    position: relative;
-    top: 0.3rem;
+#traits li>div>p{ 
     /* Texto */
     color: var(--primary-color-blue);
     font-weight: 700;   
 }
-
 /* Modificación a la descripción de cada característica */
-#traits li>p:nth-child(2){
-    /* Dimensiones */
-    width: 78%;
-    margin-top: 2vh;
-    margin-bottom: 5vh;
+#traits li>p:nth-child(2){ 
     /* Texto */
     color: var(--secondary-color-greyblue);
-    line-height: 2rem;
 }
 
-/* Estilos de sección de opiniones*/
+/* Estilos de sección de opiniones */
 #opinions{
     /* Disposición */
     display: flex;
-    align-items: center;
     flex-direction: column;
-    /* Dimensiones */
-    margin-top:5.5rem;    
-}
-
-#opinions h3{
-    /* Dimensiones */
-    margin-bottom: 2rem;
-    /* Texto */
-    font-size: 2.2rem;
+    align-items: center;  
 }
 
 #slides{
     /* Disposición */
     display: flex;
-    align-items: baseline;
     /* Dimensiones */
     width: 95vw;
     margin-bottom: 3rem;
-    padding-top: 5vh;
-    /* Visibilidad */
-    overflow-x: scroll; 
-    /* Configuración de scrollbar para mozilla */
-    scrollbar-color: var(--secondary-color-lightgrey) rgba(0, 0, 0, 0); 
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
 }
 
 .people{
@@ -318,14 +232,7 @@ con un punto */
     align-items: center;
     justify-content: center;
     /* Dimensiones */
-             /* min-width: 160px; */
-    min-width: 460px;
     padding-bottom: 3rem;
-}
-
-.people:not(:last-child){
-    /* Dimensiones */
-    margin-right: 9vw;
 }
 
 .people img{
@@ -334,7 +241,7 @@ con un punto */
 }
 
 /* Estilo de los nombres de cada persona */
-.people>p:nth-child(2){
+.people>p:nth-child(3){
     /* Texto */
     font-size: 1rem;
     font-weight: 700;
@@ -342,58 +249,27 @@ con un punto */
  }
 
 /* Estilo de las opiniones de cada persona */
-.people>p:nth-child(3){
+.people>p:nth-child(4){
     /* Texto */
-    color: var(--secondary-color-greyblue); 
-    font-size: 1rem;
-    line-height: 2rem;
-    text-align: center;
+    color: var(--secondary-color-greyblue);
+    line-height: 1.7rem;
+    text-align: center; 
  }
-
- /* Estilos de la scrollbar  */
-#slides::-webkit-scrollbar{
-    /* Dimensiones */
-    height: 9px;   
-}
-
-#slides::-webkit-scrollbar-thumb {
-    /* Disposición */
-    display: none;
-    /* Background y borde */
-    background-color: var(--secondary-color-lightgrey);
-    border-radius: 4px;    
-}
-
-/* Para que se la scrollbar se modifique al hoverear la sección slides */
-#slides:hover::-webkit-scrollbar-thumb{
-    /* Disposición */
-    display: block;  
-}
 
 /* Estilo de sección de ad */
 #join-ad{
     /* Disposición */
     display: flex;
     align-items: center;
-    justify-content: space-between;
     /* Dimensiones */
-    height: 15.5vw;
-    min-height: 100px;
     width: 100vw;
-    margin-top: 12rem;
-    padding: 0 11vw;
     /* Background y borde */
     background-color: var(--primary-color-orange);
-    background-image: url(../img/bg-simplify-section-desktop.svg);
-    background-size: cover;
 }
 
 #join-ad p{
-    /* Dimensiones */
-    width: 40%;
     /* Texto */
     color: var(--primary-color-white);
-    font-size: 2.5vw;
     font-weight: 700;   
 }
 
@@ -410,141 +286,20 @@ con un punto */
     color: var(--secondary-color-orange);
 }
 
-/* Estilos del footer */
+/* --------Estilos del footer-------- */
 footer{
     /* Disposición */
     display: flex;
     align-items:center;
-    justify-content: space-evenly;
     /* Dimensiones */
-    height: 17.2vw;
-    min-height: 300px;
     width: 100vw;
-    padding-left: 9vw;
-    padding-right: 9vw;
     /* Background y borde */
     background-color: var(--secondary-color-blue);  
 }
 
-/* Estilos de redes sociales, cambio de color al hover en cada SN*/
-#sns{
-    /* Disposición */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* Dimensiones */
-    height: 12rem;
-    padding-right: 3vw;
-}
-
-/* Disposición de los logos de redes y de logo de página */
-.logo, .negative, #sns>img{
-    /* Disposición */
-    position: relative;
-    top: -2rem;
-}
-
-#sns-links{
-    /* Disposición */
-    position: relative;
-}
-
-/* Usé rem como medida de posición para que cuando el width de la página se mueva
-desde medida x hasta 769px, los logos no se superpongan, cosa que sí pasaba con 
-vw o vh */
-.fb-logo{
-    /* Disposición */
-    position: absolute;
-    left: 0; 
-}
-
-.yt-logo{
-    /* Disposición */
-    position: absolute;
-    left: 2rem; 
-}
-
-.tw-logo{
-    /* Disposición */
-    position: absolute;
-    left: 4rem; 
-}
-
-.pin-logo{
-    /* Disposición */
-    position: absolute;
-    left: 6rem; 
-}
-
-.ig-logo{
-    /* Disposición */
-    position: absolute;
-    left: 8rem; 
-}
-
-.fb-logo img, .yt-logo img, .tw-logo img,
-.pin-logo img, .ig-logo img{
-    /* Disposición */
-    position: absolute;
-    margin: 0;
-}
-
-/* Opacidad a 0 par que el logo no se muestre mientras no se le haga hover, 
-al hacerle hover, opacidad a 1 */
-.negative{
-    /* Disposición */
-    position: absolute;
-    /* Visibilidad */
-    opacity: 0;
-}
-
-.fb-logo:hover .negative, .yt-logo:hover .negative, 
-.tw-logo:hover .negative, .pin-logo:hover .negative, 
-.ig-logo:hover .negative{
-    /* Visibilidad */
-    opacity: 1;
-}
-
-/* Opacidad a 0 para el logo original cuando se le hace hover, porque 
-sino deja una sombra blanca rara detrás del logo negativo */
-.fb-logo:hover .logo, .yt-logo:hover .logo, 
-.tw-logo:hover .logo, .pin-logo:hover .logo, 
-.ig-logo:hover .logo{
-    /* Visibilidad */
-    opacity: 0;
-}
-
-/* Estilos de los links anclas del footer */
-#footer-links{
-    /* Dimensiones */
-    width: 40vw;
-}
-
-#footer-links ul{
-    /* Disposición */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: left;
-    /* Dimensiones */
-    height: 12rem;
-    max-height: 300px;
-    margin-left: 3rem;
-}
-
-#footer-links li{
-    /* Dimensiones */
-    padding-right: 2rem; 
-    padding-bottom: 1.5rem;
-    /* Texto */
-    color: var(--primary-color-white);
-    /* Estilos de lista */
-    list-style-type: none;    
-}
-
 footer a{
     /* Texto */
-    font-size: 1rem;
+    color: var(--primary-color-white);
 }
 
 footer a:hover{
@@ -552,23 +307,97 @@ footer a:hover{
     color: var(--primary-color-orange);
 }
 
+/* Estilos de redes sociales */
+#sns{
+    /* Disposición */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Disposición de logo de página */
+#sns>img{
+    /* Disposición */
+    position: relative;
+    top: -1rem;
+}
+
+#sns-links{
+    /* Disposición */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fb-icon, .yt-icon, .tw-icon, .pin-icon, .ig-icon{
+    /* Background */
+    background-repeat: no-repeat;
+    background-size:100%;
+    /* Efectos */
+    transition: 0.2s; /* Esta transición no funciona en mozilla porque tienen 
+                      limitadas las transiciones de background :( */
+}
+/* Background y negativo de Facebook */
+.fb-icon{
+    background-image: url(../img/icon-facebook.svg);
+}
+.fb-icon:hover{
+    background-image: url(../img/icon-facebook-negative.svg);
+}
+/* Background y negativo de Youtube */
+.yt-icon{
+    background-image: url(../img/icon-youtube.svg);
+}
+.yt-icon:hover{
+    background-image: url(../img/icon-youtube-negative.svg);
+}
+/* Background y negativo de Twitter */
+.tw-icon{
+    background-image: url(../img/icon-twitter.svg);
+}
+.tw-icon:hover{
+    background-image: url(../img/icon-twitter-negative.svg);
+}
+/* Background y negativo de Pinterest */
+.pin-icon{
+    background-image: url(../img/icon-pinterest.svg);
+}
+.pin-icon:hover{
+    background-image: url(../img/icon-pinterest-negative.svg);
+}
+/* Background y negativo de Instagram */
+.ig-icon{
+    background-image: url(../img/icon-instagram.svg);
+}
+.ig-icon:hover{
+    background-image: url(../img/icon-instagram-negative.svg);
+}
+
+/* Estilos de los links anclas del footer */
+#footer-links ul{
+    /* Disposición */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* Dimensiones */
+    max-height: 300px;
+}
+
+#footer-links li{
+    /* Estilos de lista */
+    list-style-type: none;    
+}
+
 /* Estilos del newsletter */
 #newsletter{
     /* Disposición */
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    /* Dimensiones */
-    height: 12rem;
-    width: 22.7vw;
-    min-width: 200px;    
+    flex-direction: column;    
 }
 
 form{
     /* Disposición */
     position: relative;
-    top: -2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;    
@@ -579,15 +408,15 @@ form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Dimensiones */
-    padding-bottom: 1rem;
 }
 
-/* Mensaje de error para mail mal ingresado, 
-display none para que no aparezca hasta que no sea necesario */
+/* Mensaje de error para mail mal ingresado, display:none 
+para que no aparezca hasta que no sea necesario */
 #input-field #error-message{
     /* Disposición */
     display: none;
+    position: absolute; 
+    top: 6vh; 
     /* Dimensiones */
     padding-left: 0.8rem;
     /* Texto */
@@ -610,9 +439,6 @@ display none para que no aparezca hasta que no sea necesario */
     height: 5vh;
     min-height: 40px;
     max-height: 50px;
-    width: 16vw;
-    min-width: 200px;
-    max-width: 300px;
     padding-left: 1rem;
     margin-bottom: 0.7rem;
     /* Background y borde */
@@ -627,7 +453,6 @@ display none para que no aparezca hasta que no sea necesario */
 #newsletter input::placeholder{
     /* Texto */
     color: var(--secondary-color-greyblue);
-    font-size: 1rem;
     font-weight: 500;
     /* Visibilidad */
     opacity: 1; /* Firefox no muestra opacidad 100% en los placeholders */
@@ -639,6 +464,7 @@ el texto ingresado es inválido, para modificar tanto la casilla del input
 como el mensaje de error */
 #newsletter input:not(:focus):not(:placeholder-shown):invalid{
     /* Background y borde */
+    background-color: var(--secondary-color-error-red-2);
     border: solid 2px var(--secondary-color-error-red);
     /* Texto */
     color: var(--secondary-color-error-red);
@@ -649,49 +475,946 @@ como el mensaje de error */
     display: inline-block;
 }
 
+#newsletter input:focus{
+    /* Texto */
+    color: var(--secondary-color-blue);
+}
+
 #newsletter button{
     /* Dimensiones */
-    width: 10vw;
-    min-width: 60px;
+    min-width: 80px;
     max-width: 80px;
-    margin-left: 1rem;
     /* Background y borde */
     box-shadow: none;
 }
 
-
-/* no date on check means same day
--------24/6 
-- gotta finish the slides --------------------check 26/6
--maybe try a slideshow? 
--also gotta finish main and start footer -----check 25/6
--change the tab icon? ------------------------check 25/6
--Investigate light-dark colormodes
-
--------25/6 
-- makeit responsive
--slides --------------------------------------check 26/6
--still needing the tab icon ------------------check 26/6
--hover styles on buttons ---------------------check 26/6
-
-
-
--------26/6 
--padding del navbar --------------------------check
--modificar tamaño links navbar ---------------check
--alinear numeros de ol al texto --------------check
--alinear texto de las descripciones ----------check
--cambiar personmas de lugar ------------------check
--cambiar tamaño copyright --------------------check
--padding de la box de ad ---------------------check
-
+/* 
+======================================
+            MEDIA MOBILE
+====================================== 
 */
+@media (max-width: 768px) {
+    /* --------Estilos del header-------- */
+    header{
+        /* Dimensiones */
+        height: 100px;
+        width: 100vw;
+        margin-bottom: 2rem;
+    }
+    
+    nav{
+        /* Disposición */
+        align-items: flex-end;
+        /* Dimensiones */ 
+        height: 6vh;
+    }
 
-/* @media (max-width: 768px) {
+    .company-logo{
+        /* Dimensiones */
+        height: 1.5rem;
+        width: 9.1rem;
+        margin-left: 1rem;
+    }
+
+    .menu-toggler{
+        /* Disposición */
+        position: absolute;
+        top: 3rem;
+        right: 1.5rem;
+        z-index:5;
+        /* Dimensiones */
+        height: 30px;
+        width: 30px;
+        /* Visibilidad */
+        opacity: 0;
+        /* Estilo del cursor */
+        cursor: pointer;  
+    }
+    
+    .burger-menu{
+        /* Disposición */
+        position: absolute;
+        top: 3rem;
+        right: 1.5rem;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Dimensiones */
+        height: 30px;
+        width: 30px;
+        padding: 0.6rem;
+        /* Background y borde */
+        background-image: url(../img/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .menu-links{
+        /* Disposición */
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* Dimensiones */
+        width: 0%;
+        height:100vh;
+        /* Background */
+        background-color: var(--secondary-color-blue);
+        /* Efectos */
+        transition: all 0.2s ease-in-out;  
+    }
+    
+    .menu-toggler:checked ~ .menu-links{
+        /* Dimensiones */
+        width: 17vh;
+    }
+     
+    .menu-toggler:checked ~ .burger-menu{
+        /* Background */
+        background-image: url(../img/icon-close.svg);
+        /* Efectos */
+        animation:bounce 0.4s ease-in;
+    }
+
+    .menu-links > ul{
+        /* Disposición */
+        position: fixed;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        /* Visibilidad*/
+        visibility: hidden;
+    }
+    
+    .menu-toggler:checked ~ .menu-links> ul{
+        /* Visibilidad*/
+        visibility: visible;
+        /* Efectos */
+        transition: visibility 0.4s ease;  
+    }
+    
+    #header-links>li{
+        /* Disposición */
+        display: flex;
+        align-items: center;
+        /* Dimensiones */
+        height: 3rem;
+        width: 100vw;
+        padding-left: 1rem;
+        /* Efectos */
+        transition: background-color 0.7s ease;
+    }
+    
+    #header-links>li:hover{
+        /* Background */
+        background-color:var(--primary-color-orange);
+    }
+    
+    #header-links a{
+        /* Texto */
+        color: var(--primary-color-white);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    header button{
+        /* Disposición */
+        display: none;
+    }
+    
+    /* --------Estilos de etiqueta Main-------- */
+    main{
+        /* Dimensiones */
+        width: 85%;
+    }
+    
+    /*Estilos de sección de descripción */
+    #description{
+        /* Disposición */
+        flex-direction: column-reverse;
+    }
+    
+    #description>div{
+        /* Disposición */
+        align-items:center;
+    }
+    
+    #description h1{
+        /* Texto */
+        font-size: 2.3rem;   
+        text-align: center;
+    }
+    
+    #description p{
+        /* Dimensiones */
+        margin: 1vh 0 2vh 0;
+    }
+    
+    #description img{
+        /* Dimensiones */
+        width: 85vw;
+        padding-bottom: 1rem;
+    }
+    
+    /* Estilos de sección de características */
+    #traits{
+        /* Disposición */
+        flex-direction: column;
+        font-size: 0.9rem;    
+    }
+    
+    #traits h3{
+        /* Texto */
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    #traits>div{
+        align-items: center;
+    }
+    
+    #traits>div>p{
+        /* Dimensiones */
+        width: 90%;
+        padding-top: 1rem;
+        /* Texto */
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+
+    #traits ol { 
+        /* Disposición */
+        display: flex;
+        flex-direction: column;
+        /* Dimensiones */
+        margin-top: 3rem;      
+    }
    
-} */
+    #traits li::before { 
+        /* Dimensiones */
+        width: 65px;
+        padding: 11px 0;
+        /* Texto */
+        text-align: center;
+    }
+    
+    #traits li>div{
+        /* Disposición */
+        position: relative;
+        top: -40px;
+        right: -6%;
+        z-index: -1; 
+        display: flex;
+        align-items: center;
+        /* Dimensiones */
+        height: 40px;
+        width: 95vw;
+        /* Background */
+        background-color: var(--secondary-color-white);   
+        overflow-x: hidden;    
+    }
+
+    #traits li>div>p{
+        /* Dimensiones */
+        margin-left: 3.5rem; 
+    }
+
+    #traits li>p:nth-child(2){
+        /* Disposición */
+        position: relative;
+        top: -30px;
+        /* Dimensiones */
+        width: 93vw;
+        margin-bottom: 2vh;
+        /* Texto */
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.8rem;  
+    }
+    
+    /* Estilos de sección de opiniones*/
+    #opinions{
+        /* Dimensiones */
+        padding: 2rem 0;
+    }
+    
+    #opinions h3{
+        /* Dimensiones */
+        margin-bottom: 4rem;
+        /* Texto */
+        font-size: 2rem;
+    }
+    
+    #slides{
+        /* Disposición */
+        position: relative;
+        justify-content:center;
+        /* Dimensiones */
+        height: 22rem;    
+    }
+    
+    /* Para ver a cada persona */
+    #first-person:checked ~ .anisha, #second-person:checked ~ .ali,
+    #third-person:checked ~ .richard, #fourth-person:checked ~ .shanai{
+        /* Disposición */
+        display:flex;
+    }
+    /* Oculto los radio button pero siguen siendo funcionales */
+    input[type=radio]{
+        /* Disposición */
+        position: relative;
+        top: 37vh;
+        z-index: 3;
+        /* Dimensiones */
+        height: 12px;
+        /* Visibilidad */
+        opacity: 0;
+    }
+    
+    .slide-buttons{
+        /* Disposición */
+        position: relative;
+        top: 29vh;
+        z-index:2;
+        /* Dimensiones */
+        width: 70px;   
+    }
+    
+    .person-slide{
+        /* Disposición */
+        display: flex;
+        justify-content: center;
+        /* Dimensiones */
+        width: 2vh;
+    }
+    
+    .people{
+        /* Disposición */
+        position: absolute;
+        left: -0.1%;
+        display: none;
+        /* Dimensiones */
+        width: 100%;  
+    }
+
+    .people>p:nth-child(4){
+        /* Dimensiones */
+        width: 79vw;
+        max-width: 330px;
+        /* Texto */
+        font-size: 0.9rem; 
+    }
+    
+    /* Estilo de sección de ad */
+    #join-ad{
+        /* Disposición */
+        flex-direction: column;
+        justify-content: center;
+        /* Dimensiones */
+        height: 43vh;   
+        margin-top: 2vh;
+        /* Background */
+        background-image: url(../img/bg-simplify-section-mobile.svg); 
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    
+    #join-ad p{
+        /* Dimensiones */
+        width: 85%;
+        padding-bottom: 1.5rem;
+        /* Texto */
+        font-size: 2.3rem;
+        text-align: center; 
+    }
+    
+    /* --------Estilos del footer-------- */
+    footer{
+        /* Disposición */
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        /* Dimensiones */
+        height: 65vh;
+    }
+    
+    /* Estilos de redes sociales */
+    #sns{
+        /* Disposición */
+        flex-direction: column-reverse;
+        align-items: center;
+        /* Dimensiones */
+        width: 80vw;
+        height: 9rem;
+        margin-bottom: 2rem;
+    }
+
+    #sns-links{
+        /* Dimensiones */
+        width:inherit;
+    }
+
+    .logo{
+        /* Dimensiones */
+        height: 35px;
+        width: 35px;
+    }
+
+    #sns>img{
+        /* Dimensiones */
+        width: 10rem;
+    }
+    
+    /* Estilos de los links anclas del footer */
+    #footer-links{
+        /* Dimensiones */
+        width: 90vw;     
+    }
+    
+    #footer-links ul{
+        /* Disposición */
+        align-items:baseline;
+        /* Dimensiones */
+        height: 10rem;
+        width: inherit;
+        margin-left: 10vw;   
+    }
+    
+    #footer-links li{
+        /* Dimensiones */
+        padding-bottom: 1.2rem;    
+    }
+    
+    footer a{
+        /* Texto */
+        font-weight: 400;    
+    }
+    
+    /* Estilos del newsletter */
+    #newsletter{
+        /* Disposición */
+        align-items: center;
+        /* Dimensiones */
+        height: 6rem;
+        width: 100vw;
+        padding-bottom: 1.5vh;
+        padding-top: 1rem;    
+    }
+    
+    #newsletter>p{
+        /* Disposición */
+        position: relative;
+        top: 47vh;
+    }
+
+    #newsletter input{
+        /* Dimensiones */
+        width: 65vw;
+        min-width: 220px;
+        max-width: 600px;
+        /* Texto */
+        font-size: 0.9rem; /*Si no hay fontsize definida, en firefox aparece más chica la fuente*/
+    }
+    
+    #newsletter input::placeholder{
+        /* Texto */
+        font-size: 0.9rem;
+    }
+    
+    #newsletter button{
+        /* Dimensiones */
+        margin-left: 0.5rem;
+        /* Texto */
+        text-transform:uppercase;
+    }    
+}
+
+/* 
+======================================
+            MEDIA DESKTOP
+====================================== 
+*/
+@media (min-width: 769px){
+    /* --------Estilos generales-------- */
+    body{ 
+        /* Background */
+        background-image: url(../img/bg-tablet-pattern.svg);
+        background-position: left;
+        background-repeat:space;
+        background-size:70rem;
+    }
+
+    a{
+        /* Texto */
+        color: inherit;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+
+    a:hover{
+        /* Texto */
+        color: var(--secondary-color-greyblue);
+    }
+
+    /* --------Estilos del header-------- */
+    header{
+        /* Disposición */
+        justify-content: center; 
+        /* Dimensiones */
+        height: 10vh;
+        min-height: 103px;
+        margin-bottom: 6rem;    
+    }
+
+    nav{
+        /* Disposición */
+        align-items: center;
+        justify-content:center;
+        /* Dimensiones */ 
+        height: inherit;
+        width: 84vw;
+        min-width:700px;
+        padding: 0 1rem;
+    }
+
+    .company-logo{
+        /* Dimensiones */
+        height: 1.5rem;
+        width: 9.1rem;
+    }
+
+    .menu-toggler{
+        /* Disposición */
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+
+    .menu-links{
+        /* Disposición */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Dimensiones */
+        width: 60vw;
+    }
+
+    #header-links li:not(:last-child){
+        /* Dimensiones */ 
+        padding-right: 2.5vw;
+    }
+
+    /* --------Estilos de etiqueta Main-------- */
+    main{
+        /* Dimensiones */
+        width: 79%;
+    }
+
+    /*Estilos de sección de descripción */
+    #description{
+        /* Disposición */
+        justify-content:space-between;
+    }
+
+    #description>div{
+        /* Disposición */
+        align-items:baseline;
+        /* Dimensiones */
+        width: 50%; 
+    }
+
+    #description h1{
+        /* Dimensiones */
+        width: 90%;
+        /* Texto */
+        font-size: 3.6rem;   
+    }
+
+    #description p{
+        /* Dimensiones */
+        margin: 4vh 0;
+    }
+
+    #description img{
+        /* Dimensiones */
+        width: 46.8%;
+    }
+
+    /* Estilos de sección de características */
+    #traits{
+        /* Disposición */
+        display: flex;
+        align-items: flex-start;
+        justify-content:space-between;
+    }
+
+    #traits>div{
+        /* Disposición */
+        justify-content: center;
+    }
+
+    #traits h3{
+        /* Dimensiones */
+        width: 120%;
+        /* Texto */
+        font-size: 2.5rem;  
+    }
+
+    #traits>div>p{
+        /* Dimensiones */
+        width: 83%;
+        min-width: 250px;
+        margin: 3vh 0;
+        /* Texto */
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    #traits ol { 
+        /* Dimensiones */
+        margin-left: 10vw;
+    }
+
+    #traits li::before { 
+        /* Dimensiones */
+        padding: 11px 22px;
+    }
+
+    #traits ol p{
+        /* Dimensiones */
+        margin-left: 6rem;
+        /* Texto */
+        font-size: 1rem;
+    }
+
+    #traits li>div>p{
+        /* Disposición */
+        position: relative;
+        top: 0.3rem; 
+    }
+
+    #traits li>p:nth-child(2){
+        /* Dimensiones */
+        width: 77%;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+        /* Texto */
+        line-height: 2rem;
+    }
+
+    /* Estilos de sección de opiniones */
+    #opinions{
+        /* Dimensiones */
+        margin-top:5.5rem;    
+        padding: 2rem 0;
+    }
+
+    #opinions h3{
+        /* Dimensiones */
+        margin-bottom: 2rem;
+        /* Texto */
+        font-size: 2.2rem;
+    }
+
+    #slides{
+        /* Disposición */
+        align-items: baseline;
+        /* Dimensiones */
+        padding-top: 5vh;
+        /* Visibilidad */
+        overflow-x: scroll; 
+        /* Configuración de scrollbar para mozilla */
+        scrollbar-color: var(--secondary-color-lightgrey) rgba(0, 0, 0, 0); 
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+    }
+
+    input[type=radio], .slide-buttons{
+         /* Disposición */
+        display: none;
+    }
+
+    .people{
+        /* Dimensiones */
+        min-width: 460px;
+    }
+
+    .person-slide:not(:last-child){
+        /* Dimensiones */
+        margin-right: 9vw;
+    }
+
+    .people>p:nth-child(4){
+        /* Texto */
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    /* Estilos de la scrollbar  */
+    #slides::-webkit-scrollbar{
+        /* Dimensiones */
+        height: 9px;   
+    }
+
+    #slides::-webkit-scrollbar-thumb {
+        /* Disposición */
+        display: none;
+        /* Background y borde */
+        background-color: var(--secondary-color-lightgrey);
+        border-radius: 4px;    
+    }
+
+    /* Para que se la scrollbar se modifique al hacer hover la sección slides */
+    #slides:hover::-webkit-scrollbar-thumb{
+        /* Disposición */
+        display: block;  
+    }
+
+    /* Estilo de sección de ad */
+    #join-ad{
+        /* Disposición */
+        justify-content: space-between;
+        /* Dimensiones */
+        height: 15.5vw;
+        min-height: 100px;
+        margin-top: 8rem;
+        padding: 0 11vw;
+        /* Background */
+        background-image: url(../img/bg-simplify-section-desktop.svg);
+        background-position:28vh -9vw;
+        background-repeat: no-repeat;
+        background-size:cover; 
+    }
+
+    #join-ad p{
+        /* Dimensiones */
+        width: 40%;
+        /* Texto */
+        font-size: 2.5vw; 
+    }
+
+    /* --------Estilos del footer-------- */
+    footer{
+        /* Disposición */
+        justify-content: space-evenly;
+        /* Dimensiones */
+        height: 17.2vw;
+        min-height: 300px;
+        padding-left: 9vw;
+        padding-right: 9vw; 
+    }
+
+    footer a{
+        /* Texto */
+        font-size: 1rem;
+    }
 
 
-/* @media (prefers-color-scheme: dark) {
+    /* Estilos de redes sociales */
+    #sns{
+        /* Disposición */
+        flex-direction: column;
+        
+        height: 8rem;
+        padding-right: 3vw;
+    }
 
-} */
+    .logo{
+        /* Dimensiones */
+        height: 20px;
+        width: 20px; 
+    }
+    
+    /* Estilos de los links anclas del footer */
+    #footer-links{
+        /* Dimensiones */
+        width: 40vw;
+    }
+
+    #footer-links ul{
+        /* Disposición */
+        align-items: left;
+        /* Dimensiones */
+        height: 11rem;
+        margin-left: 3rem;
+    }
+
+    #footer-links li{
+        /* Dimensiones */
+        padding-right: 2rem; 
+        padding-bottom: 1.5rem;
+    }
+
+    /* Estilos del newsletter */
+    #newsletter{
+        /* Disposición */
+        align-items: flex-end;
+        justify-content: space-between;
+        /* Dimensiones */
+        height: 12rem;
+        width: 22.7vw;
+        min-width: 200px;    
+    }
+
+    #input-field{
+        /* Dimensiones */
+        padding-bottom: 1rem;
+    }
+
+    #newsletter>p{
+        /* Disposición */
+        position: relative;
+        top: -4vh;
+    }
+
+    #newsletter input{
+        /* Dimensiones */
+        width: 16vw;
+        min-width: 200px;
+        max-width: 300px;
+        /* Texto */
+        font-size: 1rem; /*Si no hay fontsize definida, en firefox aparece más chica la fuente*/
+    }
+
+    #newsletter input::placeholder{
+        /* Texto */
+        font-size: 1rem;  
+    }
+
+    #newsletter button{
+        /* Dimensiones */
+        margin-left: 1rem;
+    }
+}
+
+/* 
+======================================
+              DARK MODE
+====================================== 
+*/
+@media (prefers-color-scheme: dark){
+    /* --------Estilos generales-------- */
+    body{
+        /* Background */
+        background-color: var(--primary-color-blue);
+        background-image: url(../img/bg-tablet-pattern.svg);
+        background-blend-mode:multiply;
+        background-position: center;
+        background-repeat: repeat-y;
+        /* Texto */
+        color: var(--primary-color-white);
+    }
+    .company-logo{
+        /* Background */
+        background-image: url(../img/logo-negative.png);
+    }
+
+    /* --------Estilos del header-------- */
+    header {
+        /* Background */
+        background-color: var(--secondary-color-darkblue-transparent);   
+    }
+
+    /* --------Estilos del main-------- */
+    #traits li::before { 
+        /* Background */
+        background-color: var(--secondary-color-blue-hover);
+    }
+
+    #traits li>div>p{
+        /* Texto */
+        color: var(--primary-color-white);  
+    }
+
+    #join-ad button{
+        /* Background y borde */
+        background-color: var(--primary-color-blue);
+        box-shadow: 0 7px 15px var(--primary-color-blue);
+        color: var(--primary-color-white);
+    }
+
+    #join-ad button:hover{
+        /* Background */
+        background-color: var(--secondary-color-blue-hover);
+        /* Texto */
+        color: var(--primary-color-white);
+    }
+
+    /* --------Estilos del footer-------- */
+    #newsletter input{
+        /* Background */
+        background-color: var(--secondary-color-lightgrey);
+    }
+}
+
+/* 
+======================================
+         DARK MODE - MOBILE
+====================================== 
+*/
+@media (prefers-color-scheme: dark) and (max-width: 768px){
+    /* --------Estilos generales-------- */
+    body{
+        /* Background */
+        background-size: 150vh;
+    }
+
+    /* --------Estilos del header-------- */
+    .burger-menu{
+        /* Background */
+        background-image: url(../img/icon-hamburger-dark.svg);    
+    }
+
+    /* --------Estilos del main-------- */
+    #traits li>div>p{
+        /* Texto */
+        color: var(--primary-color-blue);
+    }
+    #opinions{
+        /* Background y borde */ 
+        background-color: var(--secondary-color-darkblue); 
+        border-radius: 50px; 
+    }
+}
+
+/* 
+======================================
+         DARK MODE - DESKTOP
+====================================== 
+*/
+@media (prefers-color-scheme: dark) and (min-width: 769px){
+    /* --------Estilos generales-------- */
+    body{
+        /* Background */
+        background-size: 80%;
+    }
+
+    a:hover{
+        /* Texto */
+        color: var(--secondary-color-orange);
+    }
+    /* --------Estilos del main-------- */
+    #opinions{
+        /* Background */
+        background-color:var(--secondary-color-darkblue); 
+        border-radius: 50px;  
+    }
+
+    #slides{
+        /* Estilo scrollbar para mozilla */
+        scrollbar-color: var(--primary-color-orange) rgba(0, 0, 0, 0); 
+    }
+
+    #slides::-webkit-scrollbar-thumb {
+        /* Background */
+        background-color: var(--primary-color-orange);
+    }
+}
+
+@keyframes bounce{
+    0%{transform: scale(0.5);}
+    33%{transform: scale(1.5);}
+    66%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}

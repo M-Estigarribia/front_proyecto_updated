@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+@import "estilos.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* --------Estilos generales-------- */
+body{
+    /* Disposición */
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    /* Dimensiones */
+    width: 100vw;
+    /* Background */
+    background-color: var(--primary-color-white);
+    /* Texto */
+    color: var(--primary-color-blue);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    /* Visibilidad */
+    overflow-x: hidden;
+}
+
+.red-button{
+    /* Dimensiones */
+    height: 5vh;
+    min-height: 40px;
+    max-height: 50px;
+    width: 15vh;
+    min-width: 150px;
+    max-width: 155px;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 7px 15px var(--primary-color-orange-transparent);
+    /* Texto */
+    color: var(--primary-color-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+
+a{
+    /* Texto */
+    text-decoration: none;
+}
+
+h1, h3{
+    font-weight: 700;
+}
+
+/* --------Estilos del header-------- */
+header{
+    /* Background */
+    background-color: var(--secondary-color-lightgrey-transparent);   
+}
+
+
+.navbar-header>div{
+    display: flex;
+    align-items: center;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    height: 27px;
+    width: 147px;
+}
+
+/* --------Estilos de etiqueta Main-------- */
+
+/*Estilos de sección de descripción */
+
+#description p{
+    /* Texto */
+    color: var(--secondary-color-greyblue); 
+}
+
+/* Estilos de sección de características */
+#traits{
+    /* Dimensiones */
+    margin-top:12vh;
+}
+
+#traits>div>p{
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+
+}
+
+/* -------Modificación de la numeración de lista/Empieza acá-------
+Hice este cambio para que los números empiecen en 0 y que no terminen
+con un punto */
+#traits ol { 
+    /* Estilos de lista */
+    list-style-type: none;
+    /* Contador para los números de la lista */
+    counter-reset:list-number;  
+}
+
+#traits li::before { 
+    /* Disposición */
+    float: left;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
+    border: none;
+    border-radius: 30px;
+    /* Texto */
+    color: var(--primary-color-white);
+    font-weight: 500;
+    /* Contenido para numerar la lista e incremento del contador */
+    content: counter(list-number, decimal-leading-zero); 
+    counter-increment: list-number;
+}
+/* -------Modificación de la numeración de lista/Termina acá------- */
+    
+/* Modificación al título de cada característica*/
+#traits li>div>p{ 
+    /* Texto */
+    color: var(--primary-color-blue);
+    font-weight: 700;   
+}
+/* Modificación a la descripción de cada característica */
+#traits li>p:nth-child(2){ 
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+}
+
+/* Estilos de sección de opiniones */
+#opinions{
+    /* Disposición */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#slides{
+    /* Disposición */
+    display: flex;
+    /* Dimensiones */
+    width: 95vw;
+    margin-bottom: 3rem;
+}
+
+.people{
+    /* Disposición */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Dimensiones */
+    padding-bottom: 3rem;
+}
+
+.people img{
+    /* Dimensiones */
+    width: 75px;
+}
+
+/* Estilo de los nombres de cada persona */
+.people>p:nth-child(3){
+    /* Texto */
+    font-weight: 700;
+    line-height: 6rem;
+ }
+
+/* Estilo de las opiniones de cada persona */
+.people>p:nth-child(4){
+    /* Texto */
+    color: var(--secondary-color-greyblue);
+    line-height: 2.7rem;
+    text-align: center; 
+ }
+
+/* Estilo de sección de ad */
+#join-ad{
+    /* Disposición */
+    display: flex;
+    align-items: center;
+    /* Dimensiones */
+    width: 100vw;
+    /* Background y borde */
+    background-color: var(--primary-color-orange);
+}
+
+#join-ad p{
+    /* Texto */
+    color: var(--primary-color-white);
+    font-weight: 700;   
+}
+
+#join-ad button{
+    /* Background y borde */
+    background-color: var(--primary-color-white);
+    box-shadow: none;
+    /* Texto */
+    color: var(--primary-color-orange);
+}
+
+/* 
+======================================
+            MEDIA MOBILE
+====================================== 
+*/
+@media (max-width: 767px) {
+    /* --------Estilos del header-------- */
+    header{
+        /* Dimensiones */
+        margin-bottom: 6rem;
+    }
+    .menu-links > ul{
+        /* Disposición */
+        position: fixed;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        /* Visibilidad*/
+    }
+
+    .navbar-nav{
+        margin-top:-5rem;
+        width: 40%;
+        height: 100vh;
+        position:absolute;
+        right: 2%;
+        background-color: var(--secondary-color-blue);
+    }
+ 
+    #header-links>li{
+        /* Efectos */
+        transition: background-color 0.7s ease;
+    }
+    
+    #header-links a{
+        /* Texto */
+        color: var(--primary-color-white);
+        font-size: 1.6rem;
+        font-weight: 400;
+   
+    }
+  
+    /* --------Estilos de etiqueta Main-------- */
+    main{
+        /* Dimensiones */
+        width: 85%;
+    }
+    
+    /*Estilos de sección de descripción */
+    #description{
+        /* Disposición */
+        flex-direction: column-reverse;
+    }
+    
+    #description>div{
+        /* Disposición */
+        align-items:center;
+    }
+    
+    #description h1{
+        /* Texto */
+        font-size: 3.6rem;   
+        text-align: center;
+    }
+    
+    #description p{
+        /* Dimensiones */
+        margin: 1vh 0 2vh 0;
+    }
+    
+    #description img{
+        /* Dimensiones */
+        width: 85vw;
+        padding-bottom: 1rem;
+    }
+    
+    /* Estilos de sección de características */
+    #traits{
+        /* Disposición */
+        flex-direction: column;
+        font-size: 0.9rem;    
+    }
+    
+    #traits h3{
+        /* Texto */
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    
+    #traits>div{
+        align-items: center;
+    }
+    
+    #traits>div>p{
+        /* Dimensiones */
+        width: 90%;
+        padding-top: 1rem;
+        /* Texto */
+        font-size: 1.5rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    #traits ol { 
+        /* Disposición */
+        display: flex;
+        flex-direction: column;
+        /* Dimensiones */
+        margin-top: 3rem;      
+    }
+   
+    #traits li::before { 
+        /* Dimensiones */
+        width: 65px;
+        padding: 11px 0;
+        /* Texto */
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    
+    #traits li>div{
+        /* Disposición */
+        position: relative;
+        top: -40px;
+        right: -6%;
+        z-index: -1; 
+        display: flex;
+        align-items: center;
+        /* Dimensiones */
+        height: 40px;
+        width: 95vw;
+        /* Background */
+        background-color: var(--secondary-color-white);   
+        overflow-x: hidden;    
+    }
+
+    #traits li>div>p{
+        /* Dimensiones */
+        margin-left: 3.5rem;
+        font-size: 1.5rem;
+        padding-top: 0.5rem; 
+    }
+
+    #traits li>p:nth-child(2){
+        /* Disposición */
+        position: relative;
+        top: -30px;
+        /* Dimensiones */
+        margin-bottom: 2vh;
+        /* Texto */
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 3rem;  
+    }
+    
+    /* Estilos de sección de opiniones*/
+    #opinions{
+        /* Dimensiones */
+        padding: 2rem 0;
+    }
+    
+    #opinions h3{
+        /* Dimensiones */
+        margin-bottom: 4rem;
+        /* Texto */
+        font-size: 3.2rem;
+    }
+    
+    #slides{
+        /* Disposición */
+        position: relative;
+        justify-content:center;
+        /* Dimensiones */
+        height: 34rem;    
+    }
+    
+    /* Para ver a cada persona */
+    #first-person:checked ~ .anisha, #second-person:checked ~ .ali,
+    #third-person:checked ~ .richard, #fourth-person:checked ~ .shanai{
+        /* Disposición */
+        display:flex;
+    }
+    /* Oculto los radio button pero siguen siendo funcionales */
+    input[type=radio]{
+        /* Disposición */
+        position: relative;
+        top: 30rem;
+        z-index: 3;
+        /* Dimensiones */
+        height: 12px;
+        /* Visibilidad */
+        opacity: 0;
+    }
+    
+    .slide-buttons{
+        /* Disposición */
+        position: relative;
+        top: 22rem;
+        z-index:2;
+        /* Dimensiones */
+        width: 70px;   
+    }
+    
+    .person-slide{
+        /* Disposición */
+        display: flex;
+        justify-content: center;
+        /* Dimensiones */
+        height: 12px;
+        width: 18px;
+    }
+    
+    .people{
+        /* Disposición */
+        position: absolute;
+        display: none;
+        left: -0.1%;
+        /* Dimensiones */
+        width: 100%;  
+    }
+
+    .people>p:nth-child(4){
+        /* Dimensiones */
+        width: 79vw;
+        max-width: 330px;
+        /* Texto */
+        font-size: 1.4rem;
+        font-weight: 400; 
+    }
+    
+    /* Estilo de sección de ad */
+    #join-ad{
+        /* Disposición */
+        flex-direction: column;
+        justify-content: center;
+        /* Dimensiones */
+        height: 43vh; 
+        width: 100vw;
+        margin-left:-10vw; 
+        margin-top: 4vh;
+        /* Background */
+        background-image: url(../img/bg-simplify-section-mobile.svg); 
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    
+    #join-ad p{
+        /* Dimensiones */
+        width: 85%;
+        padding-bottom: 1.5rem;
+        /* Texto */
+        font-size: 3.7rem;
+        text-align: center; 
+    }
+    
+}
+
+/* 
+======================================
+            MEDIA DESKTOP
+====================================== 
+*/
+@media (min-width: 768px){
+    /* --------Estilos generales-------- */
+    body{ 
+        /* Background */
+        background-image: url(../img/bg-tablet-pattern.svg);
+        background-position: left;
+        background-repeat:space;
+        background-size:70rem;
+    }
+
+    a{
+        /* Texto */
+        color: inherit;
+        /* font-size: 1.6rem; */
+        font-weight: 400;
+    }
+
+    /* --------Estilos del header-------- */
+    header{
+        /* Disposición */
+        justify-content: center; 
+        /* Dimensiones */
+        height: 10vh;
+        /* min-height: 103px; */
+        margin-bottom: 6rem;    
+    }
+
+    .container-fluid{
+        /* Disposición */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .menu-links{
+        /* Disposición */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #header-links li:not(:last-child){
+        /* Dimensiones */ 
+        padding-right: 0.2vw;
+    }
+
+    /* --------Estilos de etiqueta Main-------- */
+
+    /*Estilos de sección de descripción */
+
+    #description h1{
+        /* Dimensiones */
+        width: 90%;
+        /* Texto */
+        /* font-size: 3.6rem;    */
+    }
+
+    #description p{
+        /* Dimensiones */
+        margin: 4vh 0;
+    }
+
+    #description img{
+        /* Dimensiones */
+        width: 35vw;
+        padding-bottom: 1rem;
+    }
+
+    /* Estilos de sección de características */
+
+    #traits h3{
+        /* Dimensiones */
+        width: 80%;
+        /* Texto */
+        font-size: 4rem;  
+        line-height: 5rem;
+    }    
+
+    #traits>div>p{
+        /* Dimensiones */
+        width: 73%;
+        min-width: 250px;
+        margin: 3vh 0;
+        /* Texto */
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+
+    #traits ol { 
+        /* Dimensiones */
+        margin-left: 5vw;
+    }
+
+    #traits li::before { 
+        /* Dimensiones */
+        padding: 11px 22px;
+    }
+
+    #traits ol p{
+        /* Dimensiones */
+        margin-left: 8rem;
+        /* Texto */
+        /* font-size: 1rem; */
+    }
+
+    #traits li>div>p{
+        /* Disposición */
+        position: relative;
+        top: 0.3rem; 
+    }
+
+    #traits li>p:nth-child(2){
+        /* Dimensiones */
+        width: 77%;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+        /* Texto */
+        line-height: 3rem;
+    }
+
+    /* Estilos de sección de opiniones */
+    #opinions{
+        /* Dimensiones */
+        margin: 10rem 2.5vw 0;
+        padding: 4rem 0;
+    }
+
+    #opinions h3{
+        /* Dimensiones */
+        margin-bottom: 2rem;
+        /* Texto */
+        /* font-size: 2.2rem; */
+    }
+
+    #slides{
+        /* Disposición */
+        align-items: baseline;
+        /* Dimensiones */
+        padding-top: 5vh;
+        /* Visibilidad */
+        overflow-x: scroll; 
+        /* Configuración de scrollbar para mozilla */
+        scrollbar-color: var(--secondary-color-lightgrey) rgba(0, 0, 0, 0); 
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+    }
+
+    input[type=radio], .slide-buttons{
+         /* Disposición */
+        display: none;
+    }
+
+    .people{
+        /* Dimensiones */
+        min-width: 460px;
+    }
+
+    .person-slide:not(:last-child){
+        /* Dimensiones */
+        margin-right: 9vw;
+    }
+
+    .people>p:nth-child(4){
+        /* Texto */
+        font-weight: 400;
+    }
+
+    /* Estilos de la scrollbar  */
+    #slides::-webkit-scrollbar{
+        /* Dimensiones */
+        height: 9px;   
+    }
+
+    #slides::-webkit-scrollbar-thumb {
+        /* Disposición */
+        display: none;
+        /* Background y borde */
+        background-color: var(--secondary-color-lightgrey);
+        border-radius: 4px;    
+    }
+
+    /* Para que se la scrollbar se modifique al hacer hover la sección slides */
+    #slides:hover::-webkit-scrollbar-thumb{
+        /* Disposición */
+        display: block;  
+    }
+
+    /* Estilo de sección de ad */
+    #join-ad{
+        /* Disposición */
+        justify-content: space-between;
+        /* Dimensiones */
+        height: 15.5vw;
+        min-height: 100px;
+        margin-top: 12rem;
+        padding: 0 11vw;
+        /* Background */
+        background-image: url(../img/bg-simplify-section-desktop.svg);
+        background-position:28vh -9vw;
+        background-repeat: no-repeat;
+        background-size:cover; 
+    }
+
+    #join-ad p{
+        /* Dimensiones */
+        width: 40%;
+        /* Texto */
+        font-size: 2.5vw; 
+    }
+}
+
+/* 
+======================================
+              DARK MODE
+====================================== 
+*/
+@media (prefers-color-scheme: dark){
+    /* --------Estilos generales-------- */
+    body{
+        /* Background */
+        background-color: var(--primary-color-blue);
+        background-image: url(../img/bg-tablet-pattern.svg);
+        background-blend-mode:multiply;
+        background-position: center;
+        background-repeat: repeat-y;
+        /* Texto */
+        color: var(--primary-color-white);
+    }
+
+    /* --------Estilos del header-------- */
+    .navbar{
+        /* Background */
+        background-color: var(--secondary-color-darkblue-transparent);   
+    }
+
+    .navbar-header>div{
+        background-image: url(../img/logo-negative.png);
+    }
+
+    /* --------Estilos del main-------- */
+    #traits li::before { 
+        /* Background */
+        background-color: var(--secondary-color-blue-hover);
+    }
+
+    #traits li>div>p{
+        /* Texto */
+        color: var(--primary-color-white);  
+    }
+
+    #join-ad button{
+        /* Background y borde */
+        background-color: var(--primary-color-blue);
+        box-shadow: 0 7px 15px var(--primary-color-blue);
+        color: var(--primary-color-white);
+    }
+
+}
+
+/* 
+======================================
+         DARK MODE - MOBILE
+====================================== 
+*/
+@media (prefers-color-scheme: dark) and (max-width: 767px){
+    /* --------Estilos generales-------- */
+    body{
+        /* Background */
+        background-size: 150vh;
+    }
+
+    /* --------Estilos del header-------- */
+    .burger-menu{
+        /* Background */
+        background-image: url(../img/icon-hamburger-dark.svg);    
+    }
+
+    /* --------Estilos del main-------- */
+    #traits li>div>p{
+        /* Texto */
+        color: var(--primary-color-blue);
+    }
+    #opinions{
+        /* Background y borde */ 
+        background-color: var(--secondary-color-darkblue); 
+        border-radius: 50px; 
+    }
+}
+
+/* 
+======================================
+         DARK MODE - DESKTOP
+====================================== 
+*/
+@media (prefers-color-scheme: dark) and (min-width: 768px){
+    /* --------Estilos generales-------- */
+
+    /* --------Estilos del main-------- */
+    #opinions{
+        /* Background */
+        background-color:var(--secondary-color-darkblue); 
+        border-radius: 50px;  
+    }
+
+    #slides{
+        /* Estilo scrollbar para mozilla */
+        scrollbar-color: var(--primary-color-orange) rgba(0, 0, 0, 0); 
+    }
+
+    #slides::-webkit-scrollbar-thumb {
+        /* Background */
+        background-color: var(--primary-color-orange);
+    }
+}
+
+@keyframes bounce{
+    0%{transform: scale(0.5);}
+    33%{transform: scale(1.5);}
+    66%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}

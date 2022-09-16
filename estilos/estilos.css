@@ -1,0 +1,376 @@
+@charset "UTF-8";
+:root {
+  /* --------Colores primarios-------- */
+  --primary-color-blue: rgb(35, 44, 81);
+  --primary-color-orange: rgb(242, 95, 58);
+  --primary-color-white:rgb(255, 255, 255);
+  /* --------Colores secundarios-------- */
+  /* Azules */
+  --secondary-color-blue: rgb(29, 30, 37);
+  --secondary-color-blue-hover: rgb(78, 96, 158);
+  --secondary-color-darkblue: rgb(24, 24, 27);
+  /* Rojizos */
+  --secondary-color-orange: rgb(250, 143, 116);
+  --secondary-color-error-red: rgb(156, 73, 82);
+  --secondary-color-error-red-2: rgb(238, 194, 194);
+  /* Blancos-negros */
+  --secondary-color-white: rgb(255, 239, 234);
+  --secondary-color-lightgrey: rgb(241, 225, 225);
+  --secondary-color-greyblue: rgb(143, 148, 167);
+  /*--------Variantes transparentes--------*/
+  --secondary-color-darkblue-transparent: rgba(24, 24, 27, 0.95);
+  --primary-color-orange-transparent: rgba(242, 95, 58, 0.6);
+  --secondary-color-lightgrey-transparent: rgba(249, 249, 249, 0.9);
+}
+
+button {
+  transition: background-color 0.3s linear;
+}
+button:hover {
+  background-color: rgb(250, 143, 116);
+  color: rgb(255, 239, 234);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#join-ad button {
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+#join-ad button:hover {
+  background-color: rgb(241, 225, 225);
+  color: rgb(29, 30, 37);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(29, 30, 37);
+}
+footer a {
+  color: rgb(255, 255, 255);
+  transition: color 0.3s linear;
+}
+footer a:hover {
+  background-color: inherit;
+  color: rgb(242, 95, 58);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#sns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sns > img {
+  position: relative;
+  top: -1rem;
+}
+
+#sns-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fb-icon, .yt-icon, .tw-icon, .pin-icon, .ig-icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.2s;
+  /* Esta transición no funciona en mozilla porque tienen 
+  *  limitadas las transiciones de background :( */
+}
+
+.fb-icon {
+  background-image: url(../img/icon-facebook.svg);
+}
+
+.fb-icon:hover {
+  background-image: url(../img/icon-facebook-negative.svg);
+}
+
+.yt-icon {
+  background-image: url(../img/icon-youtube.svg);
+}
+
+.yt-icon:hover {
+  background-image: url(../img/icon-youtube-negative.svg);
+}
+
+.tw-icon {
+  background-image: url(../img/icon-twitter.svg);
+}
+
+.tw-icon:hover {
+  background-image: url(../img/icon-twitter-negative.svg);
+}
+
+.pin-icon {
+  background-image: url(../img/icon-pinterest.svg);
+}
+
+.pin-icon:hover {
+  background-image: url(../img/icon-pinterest-negative.svg);
+}
+
+.ig-icon {
+  background-image: url(../img/icon-instagram.svg);
+}
+
+.ig-icon:hover {
+  background-image: url(../img/icon-instagram-negative.svg);
+}
+
+#footer-links ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 300px;
+}
+#footer-links li {
+  list-style-type: none;
+}
+
+#newsletter {
+  display: flex;
+  flex-direction: column;
+}
+#newsletter > p {
+  color: rgb(143, 148, 167);
+  text-align: right;
+}
+#newsletter button {
+  min-width: 80px;
+  max-width: 80px;
+  box-shadow: none;
+}
+#newsletter input {
+  height: 5vh;
+  min-height: 40px;
+  max-height: 50px;
+  padding-left: 1rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+#newsletter input::-moz-placeholder {
+  color: rgb(143, 148, 167);
+  font-weight: 500;
+  opacity: 1;
+}
+#newsletter input:-ms-input-placeholder {
+  color: rgb(143, 148, 167);
+  font-weight: 500;
+  opacity: 1;
+}
+#newsletter input::placeholder {
+  color: rgb(143, 148, 167);
+  font-weight: 500;
+  opacity: 1;
+}
+#newsletter input:not(:focus):not(:-moz-placeholder-shown):invalid {
+  background-color: rgb(238, 194, 194);
+  border: solid 2px rgb(156, 73, 82);
+  color: rgb(156, 73, 82);
+}
+#newsletter input:not(:focus):not(:-ms-input-placeholder):invalid {
+  background-color: rgb(238, 194, 194);
+  border: solid 2px rgb(156, 73, 82);
+  color: rgb(156, 73, 82);
+}
+#newsletter input:not(:focus):not(:placeholder-shown):invalid {
+  background-color: rgb(238, 194, 194);
+  border: solid 2px rgb(156, 73, 82);
+  color: rgb(156, 73, 82);
+}
+#newsletter input:not(:focus):not(:-moz-placeholder-shown):invalid ~ #error-message {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+#newsletter input:not(:focus):not(:-ms-input-placeholder):invalid ~ #error-message {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+#newsletter input:not(:focus):not(:placeholder-shown):invalid ~ #error-message {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+#newsletter input:focus {
+  color: rgb(29, 30, 37);
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#input-field #error-message {
+  display: none;
+  position: absolute;
+  top: 6vh;
+  padding-left: 0.8rem;
+  color: rgb(156, 73, 82);
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  #header-links > li:hover {
+    background-color: rgb(242, 95, 58);
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  #header-links > li:hover a:hover {
+    text-decoration: none;
+  }
+  footer {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    height: 65vh;
+  }
+  footer a {
+    font-weight: 400;
+  }
+  #sns {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80vw;
+    height: 9rem;
+    margin-bottom: 2rem;
+  }
+  #sns > img {
+    width: 10rem;
+  }
+  #sns-links {
+    width: inherit;
+  }
+  .logo {
+    height: 35px;
+    width: 35px;
+  }
+  #footer-links {
+    width: 90vw;
+  }
+  #footer-links ul {
+    align-items: baseline;
+    height: 15rem;
+    width: inherit;
+    margin-left: 10vw;
+  }
+  #footer-links li {
+    padding-bottom: 1.2rem;
+  }
+  #newsletter {
+    align-items: center;
+    height: 6rem;
+    width: 100vw;
+    padding-bottom: 1.5vh;
+    padding-top: 1rem;
+  }
+  #newsletter > p {
+    position: relative;
+    top: 47vh;
+  }
+  #newsletter input {
+    width: 65vw;
+    min-width: 220px;
+    max-width: 600px;
+  }
+  #newsletter button {
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 768px) {
+  a:hover {
+    background-color: inherit;
+    color: rgb(143, 148, 167);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  footer {
+    justify-content: space-evenly;
+    height: 17.2vw;
+    min-height: 300px;
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+  #sns {
+    flex-direction: column;
+    height: 11rem;
+    padding-right: 3vw;
+  }
+  .logo {
+    height: 20px;
+    width: 20px;
+  }
+  #footer-links {
+    width: 40vw;
+  }
+  #footer-links ul {
+    align-items: left;
+    height: 16rem;
+    margin-left: 3rem;
+  }
+  #footer-links li {
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  #newsletter {
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 18rem;
+    width: 22.7vw;
+    min-width: 200px;
+  }
+  #newsletter > p {
+    position: relative;
+  }
+  #newsletter input {
+    width: 16vw;
+    min-width: 200px;
+    max-width: 300px;
+    margin-bottom: 2.6rem;
+  }
+  #newsletter button {
+    margin-left: 1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #join-ad button:hover {
+    background-color: rgb(78, 96, 158);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  #newsletter input {
+    background-color: rgb(241, 225, 225);
+  }
+  #header-links > li > a:hover {
+    background-color: inherit;
+    color: rgb(250, 143, 116);
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 768px) {
+  a:hover {
+    background-color: inherit;
+    color: rgb(250, 143, 116);
+    cursor: pointer;
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,11 @@
+@mixin hover($bg, $color)
+    background-color: $bg
+    color: $color
+    cursor: pointer
+    text-decoration: none
+
+@mixin transition($propiedad)
+    transition: #{$propiedad} 0.3s linear 
+
+@mixin multiple-transitions($prop1, $prop2)
+    transition: #{$prop1} 0.3s linear,  #{$prop2} 0.3s linear

@@ -1,0 +1,291 @@
+@import "_colores.sass", "_mixins.sass"
+
+:root
+    /* --------Colores primarios-------- */
+    --primary-color-blue: #{$primary-blue}
+    --primary-color-orange: #{$primary-orange}
+    --primary-color-white:#{$primary-white}
+    /* --------Colores secundarios-------- */
+    /* Azules */
+    --secondary-color-blue: #{$secondary-blue}
+    --secondary-color-blue-hover: #{$secondary-blue-hover}
+    --secondary-color-darkblue: #{$secondary-darkblue}
+    /* Rojizos */
+    --secondary-color-orange: #{$secondary-orange}
+    --secondary-color-error-red: #{$secondary-error-red}
+    --secondary-color-error-red-2: #{$secondary-error-red-2}
+    /* Blancos-negros */
+    --secondary-color-white: #{$secondary-white}
+    --secondary-color-lightgrey: #{$secondary-lightgrey}
+    --secondary-color-greyblue: #{$secondary-greyblue}
+    /*--------Variantes transparentes--------*/
+    --secondary-color-darkblue-transparent: #{$transparent-darkblue}
+    --primary-color-orange-transparent: #{$transparent-orange}
+    --secondary-color-lightgrey-transparent: #{$transparent-lightgrey}
+
+button
+    @include transition(background-color)
+    &:hover
+        @include hover(#{$secondary-orange},#{$secondary-white})
+
+#join-ad
+    button
+        @include multiple-transitions(background-color, color)
+        &:hover
+            @include hover(#{$secondary-lightgrey}, #{$secondary-blue})
+
+footer
+    display: flex
+    align-items: center
+    width: 100vw
+    background-color: #{$secondary-blue}
+    a   
+        color: #{$primary-white}
+        @include transition(color)
+        &:hover
+            @include hover(inherit,#{$primary-orange})
+
+#sns
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    >img
+        position: relative
+        top: -1rem
+
+#sns-links
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.fb-icon, .yt-icon, .tw-icon, .pin-icon, .ig-icon
+    background-repeat: no-repeat
+    background-size:100%
+    transition: 0.2s 
+    /* Esta transición no funciona en mozilla porque tienen 
+        limitadas las transiciones de background :( */
+
+.fb-icon
+    background-image: url(../img/icon-facebook.svg)
+
+.fb-icon:hover
+    background-image: url(../img/icon-facebook-negative.svg)
+
+.yt-icon
+    background-image: url(../img/icon-youtube.svg)
+
+.yt-icon:hover
+    background-image: url(../img/icon-youtube-negative.svg)
+
+.tw-icon
+    background-image: url(../img/icon-twitter.svg)
+
+.tw-icon:hover
+    background-image: url(../img/icon-twitter-negative.svg)
+
+.pin-icon
+    background-image: url(../img/icon-pinterest.svg)
+
+.pin-icon:hover
+    background-image: url(../img/icon-pinterest-negative.svg)
+
+.ig-icon
+    background-image: url(../img/icon-instagram.svg)
+
+.ig-icon:hover
+    background-image: url(../img/icon-instagram-negative.svg)
+
+#footer-links 
+    ul
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        max-height: 300px
+    li
+        list-style-type: none
+
+#newsletter
+    display: flex
+    flex-direction: column
+    >p
+        color: #{$secondary-greyblue}
+        text-align: right
+    button
+        min-width: 80px
+        max-width: 80px
+        box-shadow: none
+    input
+        height: 5vh
+        min-height: 40px
+        max-height: 50px
+        padding-left: 1rem
+        background-color: #{$primary-white}
+        border: none
+        border-radius: 30px
+        font-size: 1.6rem
+        font-weight: 500
+        &::placeholder
+            color: #{$secondary-greyblue}
+            font-weight: 500
+            opacity: 1
+        &:not(:focus)
+            &:not(:placeholder-shown)
+                &:invalid
+                    background-color: #{$secondary-error-red-2}
+                    border: solid 2px #{$secondary-error-red}
+                    color: #{$secondary-error-red}
+                    & ~ #error-message
+                            display: inline-block
+                            font-size: 1.1rem
+        &:focus
+            color: #{$secondary-blue}
+    
+form
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end  
+
+#input-field
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    #error-message
+        display: none
+        position: absolute 
+        top: 6vh 
+        padding-left: 0.8rem
+        color: #{$secondary-error-red}
+        font-style: italic
+        font-weight: 400  
+
+@media (max-width: 767px) 
+    #header-links
+        > li
+            &:hover
+                @include hover(#{$primary-orange}, inherit)
+                a
+                    &:hover
+                        text-decoration: none
+
+    footer
+        flex-direction: column-reverse
+        justify-content: space-evenly
+        height: 65vh
+        a
+            font-weight: 400
+
+    #sns
+        flex-direction: column-reverse
+        align-items: center
+        width: 80vw
+        height: 9rem
+        margin-bottom: 2rem
+        >img
+            width: 10rem
+
+    #sns-links
+        width: inherit
+
+    .logo
+        height: 35px
+        width: 35px
+
+    #footer-links
+        width: 90vw
+        ul
+            align-items: baseline
+            height: 15rem
+            width: inherit
+            margin-left: 10vw
+        li
+            padding-bottom: 1.2rem
+
+    #newsletter
+        align-items: center
+        height: 6rem
+        width: 100vw
+        padding-bottom: 1.5vh
+        padding-top: 1rem 
+        >p
+            position: relative
+            top: 47vh
+        input
+            width: 65vw
+            min-width: 220px
+            max-width: 600px
+
+        button
+            margin-left: 0.5rem
+            text-transform: uppercase
+                
+
+
+@media (min-width: 768px)
+    a
+        &:hover
+            @include hover(inherit, #{$secondary-greyblue})
+
+    footer
+        justify-content: space-evenly
+        height: 17.2vw
+        min-height: 300px
+        padding-left: 9vw
+        padding-right: 9vw 
+
+    #sns
+        flex-direction: column
+        height: 11rem
+        padding-right: 3vw
+
+    .logo
+        height: 20px
+        width: 20px
+
+    #footer-links
+        width: 40vw
+        ul
+            align-items: left
+            height: 16rem
+            margin-left: 3rem
+        li
+            padding-right: 2rem 
+            padding-bottom: 1.5rem
+
+    #newsletter
+        align-items: flex-end
+        justify-content: space-between
+        height: 18rem
+        width: 22.7vw
+        min-width: 200px  
+        >p
+            position: relative
+        input
+            width: 16vw
+            min-width: 200px
+            max-width: 300px
+            margin-bottom: 2.6rem
+        button
+            margin-left: 1rem
+
+@media (prefers-color-scheme: dark)
+    #join-ad
+        button
+            &:hover
+                @include hover(#{$secondary-blue-hover}, #{$primary-white})
+
+    #newsletter
+        input
+            background-color: #{$secondary-lightgrey}
+
+    #header-links 
+        >li
+            >a
+                &:hover
+                    @include hover(inherit, #{$secondary-orange})
+
+@media (prefers-color-scheme: dark)and (min-width: 768px)
+    a
+        &:hover
+            @include hover(inherit, #{$secondary-orange})
+    

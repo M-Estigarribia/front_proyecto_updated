@@ -212,7 +212,14 @@ con un punto */
     header{
         /* Dimensiones */
         margin-bottom: 6rem;
+       
     }
+
+   .container-fluid{
+    width: 80vw;
+   }
+
+
     .menu-links > ul{
         /* Disposición */
         position: fixed;
@@ -332,15 +339,15 @@ con un punto */
         align-items: center;
         /* Dimensiones */
         height: 40px;
-        width: 95vw;
+        width: 100%;
         /* Background */
         background-color: var(--secondary-color-white);   
-        overflow-x: hidden;    
+        overflow-x:hidden;    
     }
 
     #traits li>div>p{
         /* Dimensiones */
-        margin-left: 3.5rem;
+        margin-left: 6rem;
         font-size: 1.5rem;
         padding-top: 0.5rem; 
     }
@@ -440,7 +447,7 @@ con un punto */
         /* Dimensiones */
         height: 43vh; 
         width: 100vw;
-        margin-left:-10vw; 
+        margin-left:-7.5vw; 
         margin-top: 4vh;
         /* Background */
         background-image: url(../img/bg-simplify-section-mobile.svg); 
